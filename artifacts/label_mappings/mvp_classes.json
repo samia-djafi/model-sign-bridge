@@ -1,0 +1,329 @@
+{
+  "num_classes": 32,
+  "label_to_id": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "أذن": 3,
+    "ألم": 4,
+    "إبرة": 5,
+    "الآن": 6,
+    "الليل": 7,
+    "بشرة": 8,
+    "جسم": 9,
+    "حرارة": 10,
+    "حسنا": 11,
+    "خطر": 12,
+    "رأس": 13,
+    "سكر": 14,
+    "شكرا": 15,
+    "صباح": 16,
+    "طبيب أسنان": 17,
+    "طعام": 18,
+    "قلب": 19,
+    "كحول": 20,
+    "كل يوم": 21,
+    "كم": 22,
+    "لا": 23,
+    "ماء": 24,
+    "مال": 25,
+    "مريض": 26,
+    "من فضلك": 27,
+    "نصف": 28,
+    "نعم": 29,
+    "يد": 30,
+    "يساعد": 31
+  },
+  "id_to_label": {
+    "0": "1",
+    "1": "2",
+    "2": "3",
+    "3": "أذن",
+    "4": "ألم",
+    "5": "إبرة",
+    "6": "الآن",
+    "7": "الليل",
+    "8": "بشرة",
+    "9": "جسم",
+    "10": "حرارة",
+    "11": "حسنا",
+    "12": "خطر",
+    "13": "رأس",
+    "14": "سكر",
+    "15": "شكرا",
+    "16": "صباح",
+    "17": "طبيب أسنان",
+    "18": "طعام",
+    "19": "قلب",
+    "20": "كحول",
+    "21": "كل يوم",
+    "22": "كم",
+    "23": "لا",
+    "24": "ماء",
+    "25": "مال",
+    "26": "مريض",
+    "27": "من فضلك",
+    "28": "نصف",
+    "29": "نعم",
+    "30": "يد",
+    "31": "يساعد"
+  },
+  "metadata": {
+    "1": {
+      "class_id": 0,
+      "canonical_label": "1",
+      "is_numeric": true,
+      "slug": "num_1",
+      "char_count": 1,
+      "word_count": 1
+    },
+    "2": {
+      "class_id": 1,
+      "canonical_label": "2",
+      "is_numeric": true,
+      "slug": "num_2",
+      "char_count": 1,
+      "word_count": 1
+    },
+    "3": {
+      "class_id": 2,
+      "canonical_label": "3",
+      "is_numeric": true,
+      "slug": "num_3",
+      "char_count": 1,
+      "word_count": 1
+    },
+    "أذن": {
+      "class_id": 3,
+      "canonical_label": "أذن",
+      "is_numeric": false,
+      "slug": "ar_0623_0630_0646",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "ألم": {
+      "class_id": 4,
+      "canonical_label": "ألم",
+      "is_numeric": false,
+      "slug": "ar_0623_0644_0645",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "إبرة": {
+      "class_id": 5,
+      "canonical_label": "إبرة",
+      "is_numeric": false,
+      "slug": "ar_0625_0628_0631_0629",
+      "char_count": 4,
+      "word_count": 1
+    },
+    "الآن": {
+      "class_id": 6,
+      "canonical_label": "الآن",
+      "is_numeric": false,
+      "slug": "ar_0627_0644_0622_0646",
+      "char_count": 4,
+      "word_count": 1
+    },
+    "الليل": {
+      "class_id": 7,
+      "canonical_label": "الليل",
+      "is_numeric": false,
+      "slug": "ar_0627_0644_0644_064a_0644",
+      "char_count": 5,
+      "word_count": 1
+    },
+    "بشرة": {
+      "class_id": 8,
+      "canonical_label": "بشرة",
+      "is_numeric": false,
+      "slug": "ar_0628_0634_0631_0629",
+      "char_count": 4,
+      "word_count": 1
+    },
+    "جسم": {
+      "class_id": 9,
+      "canonical_label": "جسم",
+      "is_numeric": false,
+      "slug": "ar_062c_0633_0645",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "حرارة": {
+      "class_id": 10,
+      "canonical_label": "حرارة",
+      "is_numeric": false,
+      "slug": "ar_062d_0631_0627_0631_0629",
+      "char_count": 5,
+      "word_count": 1
+    },
+    "حسنا": {
+      "class_id": 11,
+      "canonical_label": "حسنا",
+      "is_numeric": false,
+      "slug": "ar_062d_0633_0646_0627",
+      "char_count": 4,
+      "word_count": 1
+    },
+    "خطر": {
+      "class_id": 12,
+      "canonical_label": "خطر",
+      "is_numeric": false,
+      "slug": "ar_062e_0637_0631",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "رأس": {
+      "class_id": 13,
+      "canonical_label": "رأس",
+      "is_numeric": false,
+      "slug": "ar_0631_0623_0633",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "سكر": {
+      "class_id": 14,
+      "canonical_label": "سكر",
+      "is_numeric": false,
+      "slug": "ar_0633_0643_0631",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "شكرا": {
+      "class_id": 15,
+      "canonical_label": "شكرا",
+      "is_numeric": false,
+      "slug": "ar_0634_0643_0631_0627",
+      "char_count": 4,
+      "word_count": 1
+    },
+    "صباح": {
+      "class_id": 16,
+      "canonical_label": "صباح",
+      "is_numeric": false,
+      "slug": "ar_0635_0628_0627_062d",
+      "char_count": 4,
+      "word_count": 1
+    },
+    "طبيب أسنان": {
+      "class_id": 17,
+      "canonical_label": "طبيب أسنان",
+      "is_numeric": false,
+      "slug": "ar_0637_0628_064a_0628_0623_0633_0646_0627_0646",
+      "char_count": 10,
+      "word_count": 2
+    },
+    "طعام": {
+      "class_id": 18,
+      "canonical_label": "طعام",
+      "is_numeric": false,
+      "slug": "ar_0637_0639_0627_0645",
+      "char_count": 4,
+      "word_count": 1
+    },
+    "قلب": {
+      "class_id": 19,
+      "canonical_label": "قلب",
+      "is_numeric": false,
+      "slug": "ar_0642_0644_0628",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "كحول": {
+      "class_id": 20,
+      "canonical_label": "كحول",
+      "is_numeric": false,
+      "slug": "ar_0643_062d_0648_0644",
+      "char_count": 4,
+      "word_count": 1
+    },
+    "كل يوم": {
+      "class_id": 21,
+      "canonical_label": "كل يوم",
+      "is_numeric": false,
+      "slug": "ar_0643_0644_064a_0648_0645",
+      "char_count": 6,
+      "word_count": 2
+    },
+    "كم": {
+      "class_id": 22,
+      "canonical_label": "كم",
+      "is_numeric": false,
+      "slug": "ar_0643_0645",
+      "char_count": 2,
+      "word_count": 1
+    },
+    "لا": {
+      "class_id": 23,
+      "canonical_label": "لا",
+      "is_numeric": false,
+      "slug": "ar_0644_0627",
+      "char_count": 2,
+      "word_count": 1
+    },
+    "ماء": {
+      "class_id": 24,
+      "canonical_label": "ماء",
+      "is_numeric": false,
+      "slug": "ar_0645_0627_0621",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "مال": {
+      "class_id": 25,
+      "canonical_label": "مال",
+      "is_numeric": false,
+      "slug": "ar_0645_0627_0644",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "مريض": {
+      "class_id": 26,
+      "canonical_label": "مريض",
+      "is_numeric": false,
+      "slug": "ar_0645_0631_064a_0636",
+      "char_count": 4,
+      "word_count": 1
+    },
+    "من فضلك": {
+      "class_id": 27,
+      "canonical_label": "من فضلك",
+      "is_numeric": false,
+      "slug": "ar_0645_0646_0641_0636_0644_0643",
+      "char_count": 7,
+      "word_count": 2
+    },
+    "نصف": {
+      "class_id": 28,
+      "canonical_label": "نصف",
+      "is_numeric": false,
+      "slug": "ar_0646_0635_0641",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "نعم": {
+      "class_id": 29,
+      "canonical_label": "نعم",
+      "is_numeric": false,
+      "slug": "ar_0646_0639_0645",
+      "char_count": 3,
+      "word_count": 1
+    },
+    "يد": {
+      "class_id": 30,
+      "canonical_label": "يد",
+      "is_numeric": false,
+      "slug": "ar_064a_062f",
+      "char_count": 2,
+      "word_count": 1
+    },
+    "يساعد": {
+      "class_id": 31,
+      "canonical_label": "يساعد",
+      "is_numeric": false,
+      "slug": "ar_064a_0633_0627_0639_062f",
+      "char_count": 5,
+      "word_count": 1
+    }
+  }
+}
