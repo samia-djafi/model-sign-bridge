@@ -1,0 +1,42 @@
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Raw dataset and large media
+data/VDzSL/
+data/raw/
+*.mp4
+*.avi
+*.mov
+*.zip
+*.tar.gz
+
+# Preprocessed features and cache
+data/processed/
+*.npy
+*.npz
+*.pkl
+*.parquet
+
+# Model checkpoints and weights
+artifacts/classifier/*.pt
+artifacts/classifier/*.pth
+artifacts/classifier/*.joblib
+artifacts/classifier/*.onnx
+artifacts/sequence_model/*.pt
+artifacts/sequence_model/*.pth
+artifacts/models/*.task
+*.egg-info/
+
+# Logs and system artifacts
+*.log
+.DS_Store
+Thumbs.db
