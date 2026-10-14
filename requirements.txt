@@ -1,0 +1,14 @@
+# Core Numerical and Data Handling
+numpy>=1.26.0
+pandas>=2.2.0
+
+# Computer Vision & Video Processing
+opencv-python>=4.9.0
+
+# Machine Learning & Metrics
+scikit-learn>=1.4.0
+scipy>=1.11.0
+
+# Utilities & Testing
+pytest>=8.0.0
+tqdm>=4.66.0
