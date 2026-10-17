@@ -1,75 +1,76 @@
 {
   "best_model": "Linear SVM",
+  "feature_representation": "landmark",
   "comparison_table": {
     "Linear SVM": {
-      "train_time_sec": 876.5176961421967,
-      "val_accuracy": 0.2708333333333333,
-      "val_macro_f1": 0.27070932539682546,
-      "test_accuracy": 0.17708333333333334,
-      "test_macro_f1": 0.18891369047619047,
-      "test_macro_precision": 0.26714015151515147,
-      "test_macro_recall": 0.17708333333333331,
-      "mean_latency_ms": 0.8805642525355021
+      "train_time_sec": 442.41906571388245,
+      "val_accuracy": 0.71875,
+      "val_macro_f1": 0.7101934523809523,
+      "test_accuracy": 0.6770833333333334,
+      "test_macro_f1": 0.6615575396825397,
+      "test_macro_precision": 0.6988095238095238,
+      "test_macro_recall": 0.6770833333333333,
+      "mean_latency_ms": 1.1494358380635579
     },
     "Logistic Regression": {
-      "train_time_sec": 3.6424434185028076,
-      "val_accuracy": 0.14583333333333334,
-      "val_macro_f1": 0.15714285714285714,
-      "test_accuracy": 0.11458333333333333,
-      "test_macro_f1": 0.12547348484848486,
-      "test_macro_precision": 0.16744791666666664,
-      "test_macro_recall": 0.11458333333333331,
-      "mean_latency_ms": 0.5196655790011088
+      "train_time_sec": 1.4127204418182373,
+      "val_accuracy": 0.6458333333333334,
+      "val_macro_f1": 0.6336805555555556,
+      "test_accuracy": 0.5104166666666666,
+      "test_macro_f1": 0.47065972222222224,
+      "test_macro_precision": 0.46651785714285715,
+      "test_macro_recall": 0.5104166666666666,
+      "mean_latency_ms": 0.6419668594996134
     },
     "Random Forest": {
-      "train_time_sec": 1.0268592834472656,
-      "val_accuracy": 0.08333333333333333,
-      "val_macro_f1": 0.07678571428571429,
-      "test_accuracy": 0.07291666666666667,
-      "test_macro_f1": 0.08288690476190477,
-      "test_macro_precision": 0.10677083333333333,
-      "test_macro_recall": 0.07291666666666666,
-      "mean_latency_ms": 66.087673107783
+      "train_time_sec": 2.224499464035034,
+      "val_accuracy": 0.6875,
+      "val_macro_f1": 0.6705109126984127,
+      "test_accuracy": 0.6458333333333334,
+      "test_macro_f1": 0.6427083333333333,
+      "test_macro_precision": 0.6630208333333333,
+      "test_macro_recall": 0.6458333333333333,
+      "mean_latency_ms": 65.3188352783521
     },
-    "MLP (256-128)": {
-      "train_time_sec": 4.497155666351318,
-      "val_accuracy": 0.0625,
-      "val_macro_f1": 0.084375,
-      "test_accuracy": 0.07291666666666667,
-      "test_macro_f1": 0.08189102564102564,
-      "test_macro_precision": 0.11770833333333333,
-      "test_macro_recall": 0.07291666666666666,
-      "mean_latency_ms": 1.6047706206639607
+    "MLP (128-64)": {
+      "train_time_sec": 2.576164484024048,
+      "val_accuracy": 0.3020833333333333,
+      "val_macro_f1": 0.31259920634920635,
+      "test_accuracy": 0.34375,
+      "test_macro_f1": 0.3397598928848929,
+      "test_macro_precision": 0.422953869047619,
+      "test_macro_recall": 0.34375,
+      "mean_latency_ms": 1.0554368297259014
     }
   },
   "generalization_evaluation": {
-    "in_domain_accuracy": 0.17708333333333334,
-    "in_domain_macro_f1": 0.18891369047619047,
-    "avatar_held_out_accuracy": 0.15,
-    "avatar_held_out_macro_f1": 0.1642554707360035,
-    "camera_held_out_accuracy": 0.09375,
-    "camera_held_out_macro_f1": 0.05205733808674985
+    "in_domain_accuracy": 0.6770833333333334,
+    "in_domain_macro_f1": 0.6615575396825397,
+    "avatar_held_out_accuracy": 0.65625,
+    "avatar_held_out_macro_f1": 0.6455939179284768,
+    "camera_held_out_accuracy": 0.5859375,
+    "camera_held_out_macro_f1": 0.5777720543345544
   },
   "per_class_metrics": {
     "1": {
       "class_id": 0,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "f1": 0.5,
       "support": 3
     },
     "2": {
       "class_id": 1,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1": 0.6666666666666666,
       "support": 3
     },
     "3": {
       "class_id": 2,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "precision": 0.5,
+      "recall": 0.3333333333333333,
+      "f1": 0.4,
       "support": 3
     },
     "أذن": {
@@ -81,58 +82,58 @@
     },
     "ألم": {
       "class_id": 4,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1": 0.6666666666666666,
       "support": 3
     },
     "إبرة": {
       "class_id": 5,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "precision": 0.16666666666666666,
+      "recall": 0.3333333333333333,
+      "f1": 0.2222222222222222,
       "support": 3
     },
     "الآن": {
       "class_id": 6,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 3
-    },
-    "الليل": {
-      "class_id": 7,
       "precision": 1.0,
       "recall": 0.6666666666666666,
       "f1": 0.8,
       "support": 3
     },
+    "الليل": {
+      "class_id": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
     "بشرة": {
       "class_id": 8,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "precision": 0.5,
+      "recall": 0.3333333333333333,
+      "f1": 0.4,
       "support": 3
     },
     "جسم": {
       "class_id": 9,
       "precision": 1.0,
-      "recall": 0.3333333333333333,
-      "f1": 0.5,
+      "recall": 1.0,
+      "f1": 1.0,
       "support": 3
     },
     "حرارة": {
       "class_id": 10,
-      "precision": 0.3333333333333333,
-      "recall": 0.3333333333333333,
-      "f1": 0.3333333333333333,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
       "support": 3
     },
     "حسنا": {
       "class_id": 11,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "support": 3
     },
     "خطر": {
@@ -145,8 +146,8 @@
     "رأس": {
       "class_id": 13,
       "precision": 1.0,
-      "recall": 0.3333333333333333,
-      "f1": 0.5,
+      "recall": 1.0,
+      "f1": 1.0,
       "support": 3
     },
     "سكر": {
@@ -158,121 +159,121 @@
     },
     "شكرا": {
       "class_id": 15,
-      "precision": 1.0,
-      "recall": 0.3333333333333333,
-      "f1": 0.5,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
       "support": 3
     },
     "صباح": {
       "class_id": 16,
       "precision": 1.0,
-      "recall": 0.3333333333333333,
-      "f1": 0.5,
+      "recall": 1.0,
+      "f1": 1.0,
       "support": 3
     },
     "طبيب أسنان": {
       "class_id": 17,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75,
       "support": 3
     },
     "طعام": {
       "class_id": 18,
-      "precision": 0.25,
-      "recall": 0.3333333333333333,
-      "f1": 0.2857142857142857,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75,
       "support": 3
     },
     "قلب": {
       "class_id": 19,
-      "precision": 0.5,
-      "recall": 0.6666666666666666,
-      "f1": 0.5714285714285714,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "support": 3
     },
     "كحول": {
       "class_id": 20,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
       "support": 3
     },
     "كل يوم": {
       "class_id": 21,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 3
-    },
-    "كم": {
-      "class_id": 22,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 3
-    },
-    "لا": {
-      "class_id": 23,
-      "precision": 0.2,
-      "recall": 0.3333333333333333,
-      "f1": 0.25,
-      "support": 3
-    },
-    "ماء": {
-      "class_id": 24,
-      "precision": 1.0,
-      "recall": 0.3333333333333333,
-      "f1": 0.5,
-      "support": 3
-    },
-    "مال": {
-      "class_id": 25,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 3
-    },
-    "مريض": {
-      "class_id": 26,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 3
-    },
-    "من فضلك": {
-      "class_id": 27,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 3
-    },
-    "نصف": {
-      "class_id": 28,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 3
-    },
-    "نعم": {
-      "class_id": 29,
-      "precision": 0.18181818181818182,
-      "recall": 0.6666666666666666,
-      "f1": 0.2857142857142857,
-      "support": 3
-    },
-    "يد": {
-      "class_id": 30,
       "precision": 0.5,
       "recall": 0.3333333333333333,
       "f1": 0.4,
       "support": 3
     },
+    "كم": {
+      "class_id": 22,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+    },
+    "لا": {
+      "class_id": 23,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "support": 3
+    },
+    "ماء": {
+      "class_id": 24,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+    },
+    "مال": {
+      "class_id": 25,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "support": 3
+    },
+    "مريض": {
+      "class_id": 26,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+    },
+    "من فضلك": {
+      "class_id": 27,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+    },
+    "نصف": {
+      "class_id": 28,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+    },
+    "نعم": {
+      "class_id": 29,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "يد": {
+      "class_id": 30,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
     "يساعد": {
       "class_id": 31,
-      "precision": 0.25,
+      "precision": 1.0,
       "recall": 0.3333333333333333,
-      "f1": 0.2857142857142857,
+      "f1": 0.5,
       "support": 3
     }
   }
