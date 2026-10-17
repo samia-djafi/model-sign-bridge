@@ -8,7 +8,7 @@ Compares:
 - Multi-Layer Perceptron (MLP)
 
 Evaluates on:
-1. In-domain Stratified Split
+1. In-domain Stratified Split (70/15/15)
 2. Avatar-Held-Out Generalization (Test: signer3)
 3. Camera-Held-Out Generalization (Test: cam4)
 
@@ -79,10 +79,14 @@ def benchmark_model(
 
 
 def main():
+    default_npz = r"data\processed\features_mvp_landmark.npz"
+    if not os.path.exists(default_npz):
+        default_npz = r"data\processed\features_mvp_pixel.npz"
+
     parser = argparse.ArgumentParser(description="Train and evaluate isolated sign classifiers.")
     parser.add_argument(
         "--features-npz",
-        default=r"data\processed\features_mvp_pixel.npz",
+        default=default_npz,
         help="Path to cached feature NPZ file",
     )
     parser.add_argument(
@@ -118,10 +122,11 @@ def main():
     X_all = npz["X"]
     y_all = npz["y"]
     rel_paths = list(npz["rel_paths"])
+    detected_mode = str(npz.get("mode", "landmark" if X_all.shape[1] > 2000 else "pixel"))
 
     label_parser = LabelParser.load(args.labels_json)
     target_names = [label_parser.decode(i) for i in range(label_parser.num_classes)]
-    print(f"Total samples: {len(X_all)} | Feature dimension: {X_all.shape[1]} | Classes: {len(target_names)}")
+    print(f"Total samples: {len(X_all)} | Feature dimension: {X_all.shape[1]} (mode: {detected_mode}) | Classes: {len(target_names)}")
 
     # Map relative paths to indices in X_all
     path_to_idx = {p: i for i, p in enumerate(rel_paths)}
@@ -145,10 +150,10 @@ def main():
     print(f"Train samples: {len(X_train)} | Val samples: {len(X_val)} | Test samples: {len(X_test)}")
 
     candidate_models = {
-        "Linear SVM": SignClassifier("linear_svm", C=0.5),
+        "Linear SVM": SignClassifier("linear_svm", C=0.1),
         "Logistic Regression": SignClassifier("logistic_regression", C=1.0, max_iter=1000),
         "Random Forest": SignClassifier("random_forest", n_estimators=150, max_depth=16),
-        "MLP (256-128)": SignClassifier("mlp", hidden_layer_sizes=(256, 128), max_iter=250),
+        "MLP (128-64)": SignClassifier("mlp", hidden_layer_sizes=(128, 64), max_iter=300),
     }
 
     benchmark_results = {}
@@ -190,6 +195,22 @@ def main():
     model_path = best_clf.save(args.output_dir, "best_model.joblib")
     model_size_kb = os.path.getsize(model_path) / 1024
 
+    prep_config = (
+        {
+            "num_frames": 16,
+            "feature_type": "landmark",
+            "include_temporal_summary": True,
+        }
+        if detected_mode == "landmark"
+        else {
+            "num_frames": 16,
+            "target_size": [32, 32],
+            "grayscale": True,
+            "normalize": True,
+            "feature_type": "spatio_temporal_pixel_motion",
+        }
+    )
+
     config = {
         "model_name": best_model_name,
         "model_type": best_clf.model_type,
@@ -203,13 +224,7 @@ def main():
         "test_accuracy": best_acc,
         "test_macro_f1": benchmark_results[best_model_name]["test_metrics"]["macro_f1"],
         "mean_latency_ms": benchmark_results[best_model_name]["test_metrics"]["mean_latency_ms"],
-        "preprocessing_config": {
-            "num_frames": 16,
-            "target_size": [32, 32],
-            "grayscale": True,
-            "normalize": True,
-            "feature_type": "spatio_temporal_pixel_motion",
-        },
+        "preprocessing_config": prep_config,
     }
 
     config_path = os.path.join(args.output_dir, "config.json")
@@ -219,6 +234,7 @@ def main():
     # 6. Save comprehensive evaluation report
     report_data = {
         "best_model": best_model_name,
+        "feature_representation": detected_mode,
         "comparison_table": {
             name: {
                 "train_time_sec": res["train_duration_sec"],
@@ -259,11 +275,13 @@ def main():
     print("FINAL BENCHMARK SUMMARY")
     print("=======================================================")
     print(f"Best Model                  : {best_model_name}")
+    print(f"Feature Representation      : {detected_mode} (dim: {X_all.shape[1]})")
     print(f"Artifact Saved To           : {model_path} ({model_size_kb:.1f} KB)")
     print(f"Config Saved To             : {config_path}")
     print(f"Evaluation Report Saved To  : {report_json_path}")
     print(f"Confusion Matrix Saved To   : {cm_csv_path}")
     print(f"In-Domain Test Accuracy     : {best_acc*100:.2f}%")
+    print(f"In-Domain Macro F1          : {benchmark_results[best_model_name]['test_metrics']['macro_f1']*100:.2f}%")
     print(f"Avatar Held-out Accuracy    : {res_avatar['test_metrics']['accuracy']*100:.2f}%")
     print(f"Camera Held-out Accuracy    : {res_cam['test_metrics']['accuracy']*100:.2f}%")
     print(f"Average Prediction Latency  : {benchmark_results[best_model_name]['test_metrics']['mean_latency_ms']:.2f} ms")
