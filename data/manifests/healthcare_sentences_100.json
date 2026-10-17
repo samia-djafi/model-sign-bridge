@@ -1,0 +1,1533 @@
+[
+  {
+    "sentence_id": "SEN-001",
+    "category": "Pharmacy Requests",
+    "french_text": "Bonjour, s'il vous plaît, j'ai une ordonnance pour des médicaments.",
+    "arabic_text": "مرحباً، من فضلك لدي وصفة طبية لشراء الدواء.",
+    "english_gloss": "Hello, please, I have a prescription for medicine.",
+    "required_tokens": [
+      "مرحبا",
+      "من فضلك",
+      "وصفة",
+      "دواء"
+    ],
+    "intended_context": "Arrival at the pharmacy counter with paper prescription.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-002",
+    "category": "Pharmacy Requests",
+    "french_text": "S'il vous plaît, ce médicament est-il disponible dans votre pharmacie ?",
+    "arabic_text": "من فضلك، هل هذا الدواء متوفر في الصيدلية؟",
+    "english_gloss": "Please, is this medicine available in your pharmacy?",
+    "required_tokens": [
+      "من فضلك",
+      "دواء",
+      "صيدلية"
+    ],
+    "intended_context": "Inquiring about stock availability of a specific drug.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-003",
+    "category": "Pharmacy Requests",
+    "french_text": "Combien coûte cette boîte de médicaments s'il vous plaît ?",
+    "arabic_text": "كم سعر هذه العلبة من الدواء من فضلك؟",
+    "english_gloss": "How much does this box of medicine cost please?",
+    "required_tokens": [
+      "كم",
+      "مال",
+      "دواء",
+      "من فضلك"
+    ],
+    "intended_context": "Price inquiry at the pharmacy checkout.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-004",
+    "category": "Pharmacy Requests",
+    "french_text": "Prenez-vous la carte Chifa pour le remboursement ?",
+    "arabic_text": "هل تتعاملون ببطاقة الشفاء للتأمين الصحي؟",
+    "english_gloss": "Do you accept the Chifa social security card?",
+    "required_tokens": [
+      "بطاقة الشفاء",
+      "صيدلية"
+    ],
+    "intended_context": "Social security reimbursement query.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-005",
+    "category": "Pharmacy Requests",
+    "french_text": "J'ai besoin d'une pommade pour une irritation de la peau.",
+    "arabic_text": "أحتاج إلى مرهم لعلاج حساسية وتهيج البشرة.",
+    "english_gloss": "I need an ointment for skin irritation.",
+    "required_tokens": [
+      "يطلب",
+      "مرهم",
+      "بشرة",
+      "ألم"
+    ],
+    "intended_context": "Requesting topical dermatological care.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-006",
+    "category": "Pharmacy Requests",
+    "french_text": "Avez-vous de l'alcool médical et des pansements ?",
+    "arabic_text": "هل لديكم كحول طبي وضمادات للجروح؟",
+    "english_gloss": "Do you have medical alcohol and bandages?",
+    "required_tokens": [
+      "كحول",
+      "ضمادة",
+      "من فضلك"
+    ],
+    "intended_context": "Purchasing antiseptic and dressing supplies.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-007",
+    "category": "Pharmacy Requests",
+    "french_text": "Je cherche des seringues pour une injection d'insuline.",
+    "arabic_text": "أبحث عن إبر لحقن الأنسولين.",
+    "english_gloss": "I am looking for syringes for insulin injection.",
+    "required_tokens": [
+      "إبرة",
+      "سكر",
+      "دواء"
+    ],
+    "intended_context": "Diabetic patient purchasing insulin syringes.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-008",
+    "category": "Pharmacy Requests",
+    "french_text": "Pouvez-vous me donner un thermomètre médical ?",
+    "arabic_text": "هل يمكنك إعطائي ميزان حرارة طبي؟",
+    "english_gloss": "Can you give me a medical thermometer?",
+    "required_tokens": [
+      "حرارة",
+      "ميزان حرارة",
+      "من فضلك"
+    ],
+    "intended_context": "Buying thermometer for fever monitoring.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-009",
+    "category": "Pharmacy Requests",
+    "french_text": "Ce médicament nécessite-t-il une ordonnance obligatoire ?",
+    "arabic_text": "هل هذا الدواء يتطلب وصفة طبية إجبارية؟",
+    "english_gloss": "Does this medicine strictly require a prescription?",
+    "required_tokens": [
+      "دواء",
+      "وصفة",
+      "سؤال"
+    ],
+    "intended_context": "Checking if product is over-the-counter or prescription-only.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-010",
+    "category": "Pharmacy Requests",
+    "french_text": "S'il vous plaît, avez-vous un médicament équivalent générique ?",
+    "arabic_text": "من فضلك، هل يوجد دواء جنيس بديل ومكافئ؟",
+    "english_gloss": "Please, do you have a generic substitute medicine?",
+    "required_tokens": [
+      "من فضلك",
+      "دواء",
+      "سؤال"
+    ],
+    "intended_context": "Asking for cheaper generic alternative.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-011",
+    "category": "Pharmacy Requests",
+    "french_text": "Où puis-je trouver la pharmacie de garde ce soir ?",
+    "arabic_text": "أين أجد صيدلية الحراسة هذه الليلة؟",
+    "english_gloss": "Where can I find the duty pharmacy tonight?",
+    "required_tokens": [
+      "صيدلية الحراسة",
+      "الليل",
+      "أين"
+    ],
+    "intended_context": "Emergency night-time pharmacy location query.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-012",
+    "category": "Pharmacy Requests",
+    "french_text": "J'ai besoin d'un sirop pour calmer la toux d'un enfant.",
+    "arabic_text": "أحتاج إلى شراب مهدئ للسعال لطفل صغير.",
+    "english_gloss": "I need a syrup to soothe a child's cough.",
+    "required_tokens": [
+      "شراب",
+      "سعال",
+      "طفل",
+      "يطلب"
+    ],
+    "intended_context": "Pediatric cough syrup request.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-013",
+    "category": "Pharmacy Requests",
+    "french_text": "Avez-vous des gouttes pour une douleur à l'oreille ?",
+    "arabic_text": "هل لديكم قطرة لعلاج ألم الأذن؟",
+    "english_gloss": "Do you have ear drops for earache?",
+    "required_tokens": [
+      "قطرة",
+      "ألم",
+      "أذن"
+    ],
+    "intended_context": "Otalgia treatment request.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-014",
+    "category": "Pharmacy Requests",
+    "french_text": "Je veux renouveler mon traitement mensuel habituel.",
+    "arabic_text": "أريد تجديد علاجي الشهري المعتاد.",
+    "english_gloss": "I want to renew my regular monthly prescription.",
+    "required_tokens": [
+      "دواء",
+      "كل يوم",
+      "وصفة"
+    ],
+    "intended_context": "Chronic prescription refill.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-015",
+    "category": "Pharmacy Requests",
+    "french_text": "Avez-vous un spray buccal pour les aphtes et la gorge ?",
+    "arabic_text": "هل لديكم بخاخ لتقرحات الفم والتهاب الحلق؟",
+    "english_gloss": "Do you have a throat spray for mouth ulcers?",
+    "required_tokens": [
+      "بخاخ",
+      "فم",
+      "ألم"
+    ],
+    "intended_context": "Oral antiseptic spray request.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-016",
+    "category": "Pharmacy Requests",
+    "french_text": "Ce médicament convient-il pour un bébé de six mois ?",
+    "arabic_text": "هل هذا الدواء مناسب لرضيع عمره ستة أشهر؟",
+    "english_gloss": "Is this medicine suitable for a 6-month-old infant?",
+    "required_tokens": [
+      "دواء",
+      "رضيع",
+      "سؤال"
+    ],
+    "intended_context": "Pediatric safety confirmation.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-017",
+    "category": "Pharmacy Requests",
+    "french_text": "Donnez-moi s'il vous plaît deux boîtes de ce traitement.",
+    "arabic_text": "أعطني من فضلك علبتين من هذا العلاج.",
+    "english_gloss": "Please give me two boxes of this treatment.",
+    "required_tokens": [
+      "2",
+      "دواء",
+      "من فضلك"
+    ],
+    "intended_context": "Specifying quantity at counter.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-018",
+    "category": "Pharmacy Requests",
+    "french_text": "Merci beaucoup pour vos conseils et votre aide.",
+    "arabic_text": "شكراً جزيلاً على نصائحكم ومساعدتكم.",
+    "english_gloss": "Thank you very much for your advice and assistance.",
+    "required_tokens": [
+      "شكرا",
+      "يساعد",
+      "حسنا"
+    ],
+    "intended_context": "Polite departure from pharmacy.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-019",
+    "category": "Symptoms & Pain",
+    "french_text": "S'il vous plaît, je suis malade et j'ai une vive douleur à la tête.",
+    "arabic_text": "من فضلك، أنا مريض وأعاني من صداع وألم حاد في الرأس.",
+    "english_gloss": "Please, I am unwell and have a severe headache.",
+    "required_tokens": [
+      "من فضلك",
+      "مريض",
+      "ألم",
+      "رأس"
+    ],
+    "intended_context": "Reporting acute headache to healthcare provider.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-020",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai une forte fièvre et des frissons depuis ce matin.",
+    "arabic_text": "لدي ارتفاع شديد في درجة الحرارة وقشعريرة منذ الصباح.",
+    "english_gloss": "I have a high fever and chills since this morning.",
+    "required_tokens": [
+      "حرارة",
+      "يشعر بالبرد",
+      "صباح"
+    ],
+    "intended_context": "Describing febrile syndrome.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-021",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai très mal au ventre et j'ai des nausées.",
+    "arabic_text": "أشعر بألم شديد في البطن ولدي غثيان.",
+    "english_gloss": "I have severe stomach ache and nausea.",
+    "required_tokens": [
+      "ألم",
+      "بطن",
+      "غثيان"
+    ],
+    "intended_context": "Gastrointestinal symptom complaint.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-022",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai une douleur insupportable à la dent depuis la nuit dernière.",
+    "arabic_text": "أعاني من ألم شديد لا يحتمل في الأسنان منذ الليلة الماضية.",
+    "english_gloss": "I have unbearable toothache since last night.",
+    "required_tokens": [
+      "ألم",
+      "طبيب أسنان",
+      "الليل"
+    ],
+    "intended_context": "Reporting severe tooth pain.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-023",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai mal à la gorge et j'ai des difficultés pour avaler.",
+    "arabic_text": "أعاني من التهاب في الحلق وصعوبة في البلع.",
+    "english_gloss": "I have a sore throat and trouble swallowing.",
+    "required_tokens": [
+      "التهاب الحلق",
+      "ألم"
+    ],
+    "intended_context": "Pharyngitis complaint.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-024",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai des courbatures et des douleurs dans tout le corps.",
+    "arabic_text": "أشعر بآلام عامة وإرهاق في كامل الجسم.",
+    "english_gloss": "I have aches and pain all over my body.",
+    "required_tokens": [
+      "ألم",
+      "جسم",
+      "متعب"
+    ],
+    "intended_context": "Generalized body aches (flu-like illness).",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-025",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai des vertiges fréquents et je me sens très faible.",
+    "arabic_text": "أعاني من دوخة متكررة وشعور شديد بالضعف.",
+    "english_gloss": "I experience frequent dizziness and feel very weak.",
+    "required_tokens": [
+      "دوخة",
+      "متعب",
+      "مريض"
+    ],
+    "intended_context": "Reporting vertigo and asthenia.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-026",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai une toux sèche qui m'empêche de dormir la nuit.",
+    "arabic_text": "لدي سعال جاف يمنعني من النوم ليلاً.",
+    "english_gloss": "I have a dry cough that prevents me from sleeping at night.",
+    "required_tokens": [
+      "سعال",
+      "الليل",
+      "ألم"
+    ],
+    "intended_context": "Nocturnal dry cough description.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-027",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai une douleur aiguë au niveau de la poitrine.",
+    "arabic_text": "أشعر بألم حاد في منطقة الصدر.",
+    "english_gloss": "I have an acute pain in my chest area.",
+    "required_tokens": [
+      "ألم",
+      "صدر",
+      "قلب"
+    ],
+    "intended_context": "Chest pain report requiring immediate evaluation.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-028",
+    "category": "Symptoms & Pain",
+    "french_text": "Mon enfant a de la diarrhée et des vomissements répétés.",
+    "arabic_text": "طفلي يعاني من إسهال وقيء متكرر.",
+    "english_gloss": "My child has repeated diarrhea and vomiting.",
+    "required_tokens": [
+      "طفل",
+      "إسهال",
+      "قيء"
+    ],
+    "intended_context": "Pediatric gastroenteritis concern.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-029",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai des démangeaisons intenses et des rougeurs sur la peau.",
+    "arabic_text": "أعاني من حكة شديدة واحمرار في الجلد.",
+    "english_gloss": "I have intense itching and redness on my skin.",
+    "required_tokens": [
+      "حكة",
+      "بشرة",
+      "ألم"
+    ],
+    "intended_context": "Dermatological rash description.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-030",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai mal au dos et j'ai du mal à me tenir debout.",
+    "arabic_text": "أعاني من ألم في الظهر وصعوبة في الوقوف.",
+    "english_gloss": "I have back pain and difficulty standing up.",
+    "required_tokens": [
+      "ألم",
+      "ظهر",
+      "متعب"
+    ],
+    "intended_context": "Lumbar pain complaint.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-031",
+    "category": "Symptoms & Pain",
+    "french_text": "Mon œil est rouge, gonflé et me fait mal.",
+    "arabic_text": "عيني حمراء ومنتفخة وتؤلمني كثيراً.",
+    "english_gloss": "My eye is red, swollen, and hurts.",
+    "required_tokens": [
+      "عين",
+      "انتفاخ",
+      "ألم"
+    ],
+    "intended_context": "Eye infection or conjunctivitis symptoms.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-032",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai des brûlures d'estomac acides après avoir mangé.",
+    "arabic_text": "أشعر بحرقان وحموضة في المعدة بعد تناول الطعام.",
+    "english_gloss": "I have acid heartburn after meals.",
+    "required_tokens": [
+      "حرقان المعدة",
+      "طعام",
+      "بطن"
+    ],
+    "intended_context": "Reflux symptom presentation.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-033",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai une blessure au pied qui saigne légèrement.",
+    "arabic_text": "لدي جرح في القدم ينزف قليلاً.",
+    "english_gloss": "I have a wound on my foot that is bleeding slightly.",
+    "required_tokens": [
+      "جرح عميق",
+      "رجل",
+      "دم"
+    ],
+    "intended_context": "Minor foot wound needing dressing.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-034",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai une sensation d'oppression et un essoufflement rapide.",
+    "arabic_text": "أشعر بضيق وسرعة في التنفس عند أي مجهود.",
+    "english_gloss": "I feel tightness and shortness of breath quickly.",
+    "required_tokens": [
+      "صعوبة في التنفس",
+      "صدر",
+      "متعب"
+    ],
+    "intended_context": "Dyspnea on exertion.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-035",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai des douleurs brûlantes en urinant.",
+    "arabic_text": "أعاني من حرقان وألم أثناء التبول.",
+    "english_gloss": "I have a burning pain when urinating.",
+    "required_tokens": [
+      "ألم",
+      "حرارة",
+      "مريض"
+    ],
+    "intended_context": "Urinary discomfort complaint.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-036",
+    "category": "Symptoms & Pain",
+    "french_text": "J'ai des palpitations et des battements cardiaques très rapides.",
+    "arabic_text": "لدي خفقان ودقات قلب سريعة جداً.",
+    "english_gloss": "I have palpitations and a very rapid heart rate.",
+    "required_tokens": [
+      "قلب",
+      "خطر",
+      "الآن"
+    ],
+    "intended_context": "Cardiac arrhythmia sensation.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-037",
+    "category": "Symptoms & Pain",
+    "french_text": "Mon nez est complètement bouché et je perds l'odorat.",
+    "arabic_text": "أنفي مسدود تماماً وفقدت حاسة الشم.",
+    "english_gloss": "My nose is completely blocked and I lost my sense of smell.",
+    "required_tokens": [
+      "أنف",
+      "مريض"
+    ],
+    "intended_context": "Nasal congestion symptoms.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-038",
+    "category": "Symptoms & Pain",
+    "french_text": "La douleur a commencé hier soir et elle augmente maintenant.",
+    "arabic_text": "بدأ الألم مساء أمس وهو يتزايد الآن.",
+    "english_gloss": "The pain started yesterday evening and is worsening now.",
+    "required_tokens": [
+      "ألم",
+      "الليل",
+      "الآن",
+      "يعاني"
+    ],
+    "intended_context": "Chronology of pain progression.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-039",
+    "category": "Medication & Dosage",
+    "french_text": "Prendre un comprimé chaque jour le matin avec un verre d'eau.",
+    "arabic_text": "تناول قرصاً واحداً كل يوم في الصباح مع كأس ماء.",
+    "english_gloss": "Take one tablet daily in the morning with a glass of water.",
+    "required_tokens": [
+      "1",
+      "كل يوم",
+      "صباح",
+      "ماء"
+    ],
+    "intended_context": "Standard once-daily morning posology.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-040",
+    "category": "Medication & Dosage",
+    "french_text": "Prendre un demi-comprimé le soir avant de dormir.",
+    "arabic_text": "تناول نصف قرص في المساء قبل النوم.",
+    "english_gloss": "Take half a tablet in the evening before sleeping.",
+    "required_tokens": [
+      "نصف",
+      "الليل"
+    ],
+    "intended_context": "Evening half-tablet posology.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-041",
+    "category": "Medication & Dosage",
+    "french_text": "Prendre deux comprimés par jour au cours des repas.",
+    "arabic_text": "تناول قرصين يومياً أثناء وجبات الطعام.",
+    "english_gloss": "Take two tablets daily during meals.",
+    "required_tokens": [
+      "2",
+      "كل يوم",
+      "طعام"
+    ],
+    "intended_context": "Twice-daily with meals instruction.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-042",
+    "category": "Medication & Dosage",
+    "french_text": "Prendre trois fois par jour : matin, midi et soir.",
+    "arabic_text": "تناول الدواء ثلاث مرات في اليوم: صباحاً، ظهراً ومساءً.",
+    "english_gloss": "Take three times daily: morning, noon, and evening.",
+    "required_tokens": [
+      "3",
+      "كل يوم",
+      "صباح",
+      "الليل"
+    ],
+    "intended_context": "Three times daily administration.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-043",
+    "category": "Medication & Dosage",
+    "french_text": "Faut-il avaler le comprimé avant ou après le repas ?",
+    "arabic_text": "هل أتناول القرص قبل الأكل أم بعد الأكل؟",
+    "english_gloss": "Should I take the tablet before or after meals?",
+    "required_tokens": [
+      "طعام",
+      "دواء",
+      "سؤال"
+    ],
+    "intended_context": "Patient asking about meal timing.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-044",
+    "category": "Medication & Dosage",
+    "french_text": "À quelle heure précise dois-je prendre ma dose ?",
+    "arabic_text": "في أي وقت بالتحديد يجب أن أتناول الجرعة؟",
+    "english_gloss": "At what exact time should I take my dose?",
+    "required_tokens": [
+      "كم",
+      "دواء",
+      "سؤال"
+    ],
+    "intended_context": "Inquiring about exact dosing schedule.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-045",
+    "category": "Medication & Dosage",
+    "french_text": "Pendant combien de jours dois-je poursuivre ce traitement ?",
+    "arabic_text": "كم يوماً يجب أن أواصل تناول هذا العلاج؟",
+    "english_gloss": "For how many days should I continue this treatment?",
+    "required_tokens": [
+      "كم",
+      "كل يوم",
+      "دواء"
+    ],
+    "intended_context": "Treatment course duration clarification.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-046",
+    "category": "Medication & Dosage",
+    "french_text": "Appliquer la pommade en fine couche deux fois par jour.",
+    "arabic_text": "ضع طبقة رقيقة من المرهم مرتين يومياً على مكان الإصابة.",
+    "english_gloss": "Apply the ointment in a thin layer twice daily.",
+    "required_tokens": [
+      "مرهم",
+      "2",
+      "كل يوم",
+      "بشرة"
+    ],
+    "intended_context": "Topical cream application instruction.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-047",
+    "category": "Medication & Dosage",
+    "french_text": "Bien agiter le flacon de sirop avant chaque prise.",
+    "arabic_text": "رج زجاجة الشراب جيداً قبل كل استخدام.",
+    "english_gloss": "Shake the syrup bottle well before each use.",
+    "required_tokens": [
+      "شراب",
+      "دواء",
+      "ينتبه"
+    ],
+    "intended_context": "Liquid suspension instruction.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-048",
+    "category": "Medication & Dosage",
+    "french_text": "Mettre trois gouttes dans chaque œil matin et soir.",
+    "arabic_text": "ضع ثلاث قطرات في كل عين صباحاً ومساءً.",
+    "english_gloss": "Put three drops in each eye morning and evening.",
+    "required_tokens": [
+      "3",
+      "قطرة",
+      "عين",
+      "صباح",
+      "الليل"
+    ],
+    "intended_context": "Eye drop administration.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-049",
+    "category": "Medication & Dosage",
+    "french_text": "Conserver ce médicament au réfrigérateur et à l'abri de la lumière.",
+    "arabic_text": "احفظ هذا الدواء في الثلاجة وبعيداً عن الضوء.",
+    "english_gloss": "Keep this medication in the refrigerator away from light.",
+    "required_tokens": [
+      "دواء",
+      "يشعر بالبرد",
+      "ينتبه"
+    ],
+    "intended_context": "Cold storage instruction (insulin/antibiotics).",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-050",
+    "category": "Medication & Dosage",
+    "french_text": "J'ai oublié de prendre ma dose ce matin, que dois-je faire ?",
+    "arabic_text": "نسيت تناول جرعتي هذا الصباح، فماذا أفعل الآن؟",
+    "english_gloss": "I forgot to take my dose this morning, what should I do?",
+    "required_tokens": [
+      "ينسى",
+      "صباح",
+      "دواء",
+      "الآن"
+    ],
+    "intended_context": "Missed dose counseling inquiry.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-051",
+    "category": "Medication & Dosage",
+    "french_text": "Ne jamais dépasser la dose maximale prescrite par le médecin.",
+    "arabic_text": "تحذير: لا تتجاوز أبداً الجرعة القصوى المحددة في الوصفة.",
+    "english_gloss": "Never exceed the maximum dose prescribed by the doctor.",
+    "required_tokens": [
+      "تحذير",
+      "لا",
+      "طبيب",
+      "وصفة"
+    ],
+    "intended_context": "Overdose prevention warning.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-052",
+    "category": "Medication & Dosage",
+    "french_text": "Terminez toute la boîte d'antibiotiques même si vous allez mieux.",
+    "arabic_text": "أكمل كل علبة المضاد الحيوي حتى لو شعرت بتحسن.",
+    "english_gloss": "Finish the full antibiotic box even if you feel better.",
+    "required_tokens": [
+      "مضاد حيوي",
+      "كل يوم",
+      "ينتبه"
+    ],
+    "intended_context": "Antibiotic adherence instruction.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-053",
+    "category": "Medication & Dosage",
+    "french_text": "Ce médicament provoque-t-il de la somnolence au volant ?",
+    "arabic_text": "هل يسبب هذا الدواء النعاس أثناء قيادة السيارة؟",
+    "english_gloss": "Does this medicine cause drowsiness when driving?",
+    "required_tokens": [
+      "دواء",
+      "متعب",
+      "ينتبه",
+      "سؤال"
+    ],
+    "intended_context": "Driving impairment inquiry.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-054",
+    "category": "Medication & Dosage",
+    "french_text": "Ne pas donner ce médicament aux enfants sans avis médical.",
+    "arabic_text": "لا تعطِ هذا الدواء للأطفال دون استشارة الطبيب.",
+    "english_gloss": "Do not give this medicine to children without medical advice.",
+    "required_tokens": [
+      "لا",
+      "طفل",
+      "دواء",
+      "طبيب"
+    ],
+    "intended_context": "Pediatric contraindication warning.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-055",
+    "category": "Allergies & Contraindications",
+    "french_text": "Attention : je suis allergique à la pénicilline et aux antibiotiques.",
+    "arabic_text": "تحذير: لدي حساسية مفرطة من البنسلين والمضادات الحيوية.",
+    "english_gloss": "Warning: I am allergic to penicillin and antibiotics.",
+    "required_tokens": [
+      "تحذير",
+      "حساسية",
+      "مضاد حيوي"
+    ],
+    "intended_context": "Critical allergy notification at counter.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-056",
+    "category": "Allergies & Contraindications",
+    "french_text": "Ce médicament me provoque des démangeaisons et des boutons rouges.",
+    "arabic_text": "هذا الدواء يسبب لي حكة وظهور حبوب حمراء في الجلد.",
+    "english_gloss": "This medicine causes itching and red bumps on my skin.",
+    "required_tokens": [
+      "دواء",
+      "حكة",
+      "بشرة",
+      "ألم"
+    ],
+    "intended_context": "Reporting drug eruption / adverse skin reaction.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-057",
+    "category": "Allergies & Contraindications",
+    "french_text": "Je suis diabétique, ce sirop contient-il du sucre ?",
+    "arabic_text": "أنا مصاب بالسكري، هل يحتوي هذا الشراب على السكر؟",
+    "english_gloss": "I am diabetic, does this syrup contain sugar?",
+    "required_tokens": [
+      "سكر",
+      "مريض",
+      "شراب",
+      "سؤال"
+    ],
+    "intended_context": "Checking sugar content for diabetes management.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-058",
+    "category": "Allergies & Contraindications",
+    "french_text": "Je souffre d'hypertension artérielle, puis-je prendre ce médicament ?",
+    "arabic_text": "أعاني من ارتفاع ضغط الدم، فهل يمكنني تناول هذا الدواء؟",
+    "english_gloss": "I have high blood pressure, can I take this medication?",
+    "required_tokens": [
+      "ضغط الدم",
+      "قلب",
+      "دواء",
+      "سؤال"
+    ],
+    "intended_context": "Hypertension contraindication check.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-059",
+    "category": "Allergies & Contraindications",
+    "french_text": "Arrêtez immédiatement le traitement en cas d'éruption cutanée.",
+    "arabic_text": "أوقف العلاج فوراً في حال ظهور طفح جلدي أو حساسية.",
+    "english_gloss": "Stop treatment immediately if a skin rash appears.",
+    "required_tokens": [
+      "توقف",
+      "الآن",
+      "طفح جلدي",
+      "بشرة"
+    ],
+    "intended_context": "Drug safety cessation warning.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-060",
+    "category": "Allergies & Contraindications",
+    "french_text": "Avez-vous d'autres allergies connues à certains aliments ou pollens ?",
+    "arabic_text": "هل لديك أي حساسية أخرى معروفة تجاه أطعمة معينة؟",
+    "english_gloss": "Do you have any other known allergies to foods or pollen?",
+    "required_tokens": [
+      "حساسية",
+      "طعام",
+      "سؤال"
+    ],
+    "intended_context": "Triage allergy history screening.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-061",
+    "category": "Allergies & Contraindications",
+    "french_text": "Je suis enceinte, ce comprimé présente-t-il un risque pour le bébé ?",
+    "arabic_text": "أنا حامل، هل يشكل هذا القرص أي خطر على الجنين؟",
+    "english_gloss": "I am pregnant, does this tablet pose a risk to the baby?",
+    "required_tokens": [
+      "حامل",
+      "خطر",
+      "طفل",
+      "دواء"
+    ],
+    "intended_context": "Pregnancy teratogenicity screening.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-062",
+    "category": "Allergies & Contraindications",
+    "french_text": "J'allaite mon bébé, ce médicament passe-t-il dans le lait maternel ?",
+    "arabic_text": "أنا مرضعة، هل يفرز هذا الدواء في حليب الأم؟",
+    "english_gloss": "I am breastfeeding, does this medicine pass into breast milk?",
+    "required_tokens": [
+      "رضاعة",
+      "رضيع",
+      "دواء",
+      "سؤال"
+    ],
+    "intended_context": "Lactation safety verification.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-063",
+    "category": "Allergies & Contraindications",
+    "french_text": "J'ai un ulcère à l'estomac, évitez de me donner de l'aspirine.",
+    "arabic_text": "لدي قرحة في المعدة، تجنب إعطائي الأسبرين ومضادات الالتهاب.",
+    "english_gloss": "I have a stomach ulcer, avoid giving me aspirin.",
+    "required_tokens": [
+      "بطن",
+      "قرحة المعدة",
+      "دواء",
+      "لا"
+    ],
+    "intended_context": "Gastro-toxic drug avoidance.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-064",
+    "category": "Allergies & Contraindications",
+    "french_text": "Ce médicament m'a provoqué des vertiges et des crampes d'estomac.",
+    "arabic_text": "تسبب لي هذا الدواء في دوخة وتشنجات مؤلمة في المعدة.",
+    "english_gloss": "This medicine caused me dizziness and stomach cramps.",
+    "required_tokens": [
+      "دواء",
+      "دوخة",
+      "ألم",
+      "بطن"
+    ],
+    "intended_context": "Adverse drug reaction report.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-065",
+    "category": "Allergies & Contraindications",
+    "french_text": "Ne jamais mélanger ce traitement avec la prise d'alcool.",
+    "arabic_text": "تحذير قطعي: لا تخلط هذا العلاج إطلاقاً مع الكحول.",
+    "english_gloss": "Never mix this treatment with alcohol consumption.",
+    "required_tokens": [
+      "تحذير",
+      "لا",
+      "دواء",
+      "كحول"
+    ],
+    "intended_context": "Alcohol-drug interaction warning.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-066",
+    "category": "Allergies & Contraindications",
+    "french_text": "Mon visage et mes lèvres commencent à gonfler subitement.",
+    "arabic_text": "بدأ وجهي وشفتي ينتفخان بشكل مفاجئ وسريع.",
+    "english_gloss": "My face and lips are suddenly starting to swell.",
+    "required_tokens": [
+      "انتفاخ",
+      "رأس",
+      "خطر",
+      "الآن"
+    ],
+    "intended_context": "Angioedema sign requiring emergency care.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-067",
+    "category": "Allergies & Contraindications",
+    "french_text": "Je ressens une gêne respiratoire après avoir pris la gélule.",
+    "arabic_text": "أشعر بضيق في التنفس بعد أن تناولت الحبة مباشرة.",
+    "english_gloss": "I feel breathing distress right after taking the capsule.",
+    "required_tokens": [
+      "صعوبة في التنفس",
+      "دواء",
+      "خطر"
+    ],
+    "intended_context": "Acute bronchospasm / drug reaction.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-068",
+    "category": "Allergies & Contraindications",
+    "french_text": "Notez cette allergie dans mon dossier pharmaceutique pour les prochaines fois.",
+    "arabic_text": "سجل هذه الحساسية في ملفي الصيدلاني لتفاديها مستقبلاً.",
+    "english_gloss": "Record this allergy in my pharmacy file for future safety.",
+    "required_tokens": [
+      "حساسية",
+      "صيدلي",
+      "ينتبه"
+    ],
+    "intended_context": "Pharmacy record update.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-069",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "URGENCE : Aidez-moi vite, j'ai besoin d'une ambulance !",
+    "arabic_text": "حالة طارئة: ساعدوني بسرعة، أحتاج إلى سيارة إسعاف!",
+    "english_gloss": "EMERGENCY: Help me quickly, I need an ambulance!",
+    "required_tokens": [
+      "خطر",
+      "يساعد",
+      "الآن",
+      "إسعاف"
+    ],
+    "intended_context": "Immediate critical emergency distress call.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-070",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Appelez la Protection Civile au numéro 14 immédiatement !",
+    "arabic_text": "اتصلوا بالحماية المدنية على الرقم 14 فوراً!",
+    "english_gloss": "Call Civil Protection on 14 immediately!",
+    "required_tokens": [
+      "يتصل هاتفيا",
+      "الحماية المدنية",
+      "الآن"
+    ],
+    "intended_context": "Directing bystander to dial 14 in Algeria.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-071",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Il y a un accident grave sur la route avec des blessés.",
+    "arabic_text": "وقع حادث سير خطير على الطريق وهناك مصابون.",
+    "english_gloss": "There is a severe road accident with injured people.",
+    "required_tokens": [
+      "حادث",
+      "خطر",
+      "دم",
+      "يساعد"
+    ],
+    "intended_context": "Reporting traffic trauma incident.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-072",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Hémorragie sévère : le sang coule abondamment et ne s'arrête pas.",
+    "arabic_text": "نزيف حاد: الدم يتدفق بغزارة ولا يتوقف.",
+    "english_gloss": "Severe hemorrhage: blood is flowing heavily and won't stop.",
+    "required_tokens": [
+      "نزيف",
+      "دم",
+      "خطر",
+      "لا",
+      "توقف"
+    ],
+    "intended_context": "Uncontrolled hemorrhage triage.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-073",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Une personne s'est évanouie et a perdu connaissance par terre.",
+    "arabic_text": "أغمي على شخص وفقد وعيه وسقط على الأرض.",
+    "english_gloss": "A person has fainted and lost consciousness on the floor.",
+    "required_tokens": [
+      "غيبوبة",
+      "مريض",
+      "سقوط",
+      "يساعد"
+    ],
+    "intended_context": "Syncope / collapse report.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-074",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Douleur très violente dans la poitrine avec engourdissement du bras gauche.",
+    "arabic_text": "ألم عنيف جداً في الصدر مع تنميل في الذراع واليد اليسرى.",
+    "english_gloss": "Very severe chest pain with numbness radiating to left arm.",
+    "required_tokens": [
+      "ألم حاد في الصدر",
+      "قلب",
+      "يد",
+      "خطر"
+    ],
+    "intended_context": "Myocardial infarction symptom presentation.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-075",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Je ne peux plus respirer du tout, je suffoque !",
+    "arabic_text": "لا أستطيع التنفس إطلاقاً، أشعر بالاختناق الشديد!",
+    "english_gloss": "I cannot breathe at all, I am suffocating!",
+    "required_tokens": [
+      "صعوبة في التنفس",
+      "اختناق",
+      "خطر",
+      "الآن"
+    ],
+    "intended_context": "Acute respiratory arrest / choking.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-076",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Suspicion de fracture : je ne peux plus bouger ma jambe après une chute.",
+    "arabic_text": "اشتباه في كسر: لا أستطيع تحريك رجلي بعد السقوط.",
+    "english_gloss": "Suspected fracture: I cannot move my leg after a fall.",
+    "required_tokens": [
+      "كسر",
+      "رجل",
+      "سقوط",
+      "ألم"
+    ],
+    "intended_context": "Limb fracture report.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-077",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Un enfant a avalé un produit toxique, c'est un empoisonnement !",
+    "arabic_text": "ابتلع طفل مادة سامة، إنها حالة تسمم حادة!",
+    "english_gloss": "A child swallowed a toxic product, it is poisoning!",
+    "required_tokens": [
+      "تسمم",
+      "طفل",
+      "خطر",
+      "الآن"
+    ],
+    "intended_context": "Pediatric accidental poisoning emergency.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-078",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Une personne fait des convulsions et tremble violemment.",
+    "arabic_text": "شخص يعاني من تشنجات عصبية ويرتجف بشدة.",
+    "english_gloss": "A person is having convulsions and shaking violently.",
+    "required_tokens": [
+      "تشنج",
+      "مريض",
+      "خطر"
+    ],
+    "intended_context": "Active grand-mal seizure description.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-079",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Brûlure grave causée par de l'eau bouillante ou du feu.",
+    "arabic_text": "حرق عميق وخطير ناتج عن ماء مغلي أو نار.",
+    "english_gloss": "Severe burn caused by boiling water or fire.",
+    "required_tokens": [
+      "حروق",
+      "ماء",
+      "ألم",
+      "خطر"
+    ],
+    "intended_context": "Thermal burn emergency presentation.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-080",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Où se trouve l'hôpital le plus proche avec un service d'urgences ?",
+    "arabic_text": "أين يقع أقرب مستشفى به مصلحة استعجالات؟",
+    "english_gloss": "Where is the nearest hospital with an emergency room?",
+    "required_tokens": [
+      "أين",
+      "مستشفى",
+      "مصلحة الاستعجالات"
+    ],
+    "intended_context": "Locating nearest trauma center.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-081",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Choc anaphylactique : gorge fermée, gonflement et urticaire géante.",
+    "arabic_text": "صدمة حساسية حادة: انسداد الحلق وانتفاخ الوجه وصعوبة التنفس.",
+    "english_gloss": "Anaphylactic shock: throat closing, swelling, and severe reaction.",
+    "required_tokens": [
+      "صدمة حساسية",
+      "صعوبة في التنفس",
+      "خطر",
+      "الآن"
+    ],
+    "intended_context": "Life-threatening allergic reaction.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-082",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Faiblesse subite d'un côté du corps et difficulté à parler.",
+    "arabic_text": "شلل وضعف مفاجئ في جانب واحد من الجسم مع ثقل في الكلام.",
+    "english_gloss": "Sudden weakness on one side of body and trouble speaking (Stroke).",
+    "required_tokens": [
+      "شلل مفاجئ",
+      "جسم",
+      "خطر"
+    ],
+    "intended_context": "Stroke / FAST warning symptom presentation.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-083",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Insolation sévère : forte fièvre, confusion et déshydratation.",
+    "arabic_text": "ضربة شمس خطيرة: ارتفاع شديد في الحرارة وتشوش في الوعي.",
+    "english_gloss": "Severe heatstroke: high fever, confusion, and dehydration.",
+    "required_tokens": [
+      "ضربة شمس",
+      "حرارة",
+      "خطر"
+    ],
+    "intended_context": "Environmental hyperthermia crisis.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-084",
+    "category": "Emergencies & Urgent Help",
+    "french_text": "Transport d'urgence nécessaire immédiatement vers l'hôpital.",
+    "arabic_text": "يلزم نقل المريض بشكل عاجل وفوري إلى المستشفى.",
+    "english_gloss": "Urgent transfer required immediately to the hospital.",
+    "required_tokens": [
+      "مستعجل",
+      "مستشفى",
+      "الآن",
+      "ينقذ"
+    ],
+    "intended_context": "Emergency patient transport request.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-085",
+    "category": "Patient States",
+    "french_text": "Le patient est une personne âgée qui vit seule à la maison.",
+    "arabic_text": "المريض شخص مسن يعيش بمفرده في البيت.",
+    "english_gloss": "The patient is an elderly person living alone at home.",
+    "required_tokens": [
+      "مريض",
+      "مسن"
+    ],
+    "intended_context": "Geriatric social and clinical vulnerability context.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-086",
+    "category": "Patient States",
+    "french_text": "La patiente est enceinte au sixième mois de grossesse.",
+    "arabic_text": "المريضة امرأة حامل في شهرها السادس.",
+    "english_gloss": "The patient is pregnant in her sixth month.",
+    "required_tokens": [
+      "مريض",
+      "حامل",
+      "6"
+    ],
+    "intended_context": "Obstetric consultation context.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-087",
+    "category": "Patient States",
+    "french_text": "Ce traitement est destiné à un nouveau-né nourri au biberon.",
+    "arabic_text": "هذا العلاج مخصص لرضيع حديث الولادة.",
+    "english_gloss": "This treatment is for a newborn baby.",
+    "required_tokens": [
+      "دواء",
+      "رضيع"
+    ],
+    "intended_context": "Neonatal care context.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-088",
+    "category": "Patient States",
+    "french_text": "Le patient souffre d'un diabète de type 1 insulino-dépendant.",
+    "arabic_text": "المريض مصاب بمرض السكري ويعتمد على حقن الأنسولين.",
+    "english_gloss": "The patient has insulin-dependent Type 1 diabetes.",
+    "required_tokens": [
+      "مريض",
+      "سكر",
+      "إبرة"
+    ],
+    "intended_context": "Type 1 diabetes clinical profile.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-089",
+    "category": "Patient States",
+    "french_text": "Le patient a des antécédents d'insuffisance rénale chronique.",
+    "arabic_text": "المريض لديه تاريخ مرضي مع القصور الكلوي المزمن.",
+    "english_gloss": "The patient has a history of chronic kidney disease.",
+    "required_tokens": [
+      "مريض",
+      "قصور كلوي"
+    ],
+    "intended_context": "Renal dosing precaution note.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-090",
+    "category": "Patient States",
+    "french_text": "Le patient est asthmatique et utilise un inhalateur quotidien.",
+    "arabic_text": "المريض مصاب بالربو ويستخدم بخاخاً طبياً بشكل يومي.",
+    "english_gloss": "The patient is asthmatic and uses a daily inhaler.",
+    "required_tokens": [
+      "مريض",
+      "ربو",
+      "بخاخ",
+      "كل يوم"
+    ],
+    "intended_context": "Chronic asthma patient status.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-091",
+    "category": "Patient States",
+    "french_text": "La patiente allaite actuellement un bébé de trois mois.",
+    "arabic_text": "المريضة ترضع حالياً طفلاً يبلغ من العمر ثلاثة أشهر.",
+    "english_gloss": "The patient is currently breastfeeding a three-month-old infant.",
+    "required_tokens": [
+      "رضاعة",
+      "رضيع",
+      "3"
+    ],
+    "intended_context": "Lactation screening context.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-092",
+    "category": "Patient States",
+    "french_text": "Le patient fume un paquet de cigarettes chaque jour.",
+    "arabic_text": "المريض يدخن علبة سجائر كل يوم.",
+    "english_gloss": "The patient smokes a pack of cigarettes every day.",
+    "required_tokens": [
+      "يدخن",
+      "كل يوم"
+    ],
+    "intended_context": "Smoking history documentation.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-093",
+    "category": "Communication Guidance",
+    "french_text": "Pouvez-vous répéter plus lentement s'il vous plaît ?",
+    "arabic_text": "هل يمكنك إعادة الشرح ببطء أكثر من فضلك؟",
+    "english_gloss": "Could you please repeat more slowly?",
+    "required_tokens": [
+      "يكرر",
+      "ببطء",
+      "من فضلك"
+    ],
+    "intended_context": "Pacing adjustment request by deaf signer.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-094",
+    "category": "Communication Guidance",
+    "french_text": "Je n'ai pas bien compris, pouvez-vous me l'écrire sur papier ?",
+    "arabic_text": "لم أفهم جيداً، هل يمكنك كتابة ذلك لي على ورقة؟",
+    "english_gloss": "I did not understand well, can you write it down on paper for me?",
+    "required_tokens": [
+      "لا",
+      "فهم",
+      "اكتب لي"
+    ],
+    "intended_context": "Requesting written visual support.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-095",
+    "category": "Communication Guidance",
+    "french_text": "Montrez-moi directement sur la boîte les horaires de prise.",
+    "arabic_text": "أرني مباشرة على علبة الدواء أوقات تناول الجرعات.",
+    "english_gloss": "Show me directly on the box the times to take it.",
+    "required_tokens": [
+      "أرني",
+      "دواء",
+      "من فضلك"
+    ],
+    "intended_context": "Visual packaging demonstration.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-096",
+    "category": "Communication Guidance",
+    "french_text": "Oui, j'ai parfaitement compris toutes les explications du pharmacien.",
+    "arabic_text": "نعم، لقد فهمت تماماً كل توضيحات الصيدلي.",
+    "english_gloss": "Yes, I have fully understood all the pharmacist's explanations.",
+    "required_tokens": [
+      "نعم",
+      "فهم",
+      "صيدلي",
+      "حسنا"
+    ],
+    "intended_context": "Confirmation of comprehension.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-097",
+    "category": "Communication Guidance",
+    "french_text": "J'ai une question importante à poser au médecin spécialiste.",
+    "arabic_text": "لدي سؤال مهم أود طرحه على الطبيب المختص.",
+    "english_gloss": "I have an important question for the medical specialist.",
+    "required_tokens": [
+      "سؤال",
+      "طبيب",
+      "يطلب"
+    ],
+    "intended_context": "Initiating clinical question.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-098",
+    "category": "Communication Guidance",
+    "french_text": "Dois-je revenir demain pour récupérer le reste de mes médicaments ?",
+    "arabic_text": "هل يجب أن أعود غداً لاستلام باقي أدويتي؟",
+    "english_gloss": "Should I come back tomorrow to collect the rest of my medicines?",
+    "required_tokens": [
+      "غدا",
+      "دواء",
+      "سؤال"
+    ],
+    "intended_context": "Scheduling pharmacy pickup for delayed orders.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  },
+  {
+    "sentence_id": "SEN-099",
+    "category": "Communication Guidance",
+    "french_text": "Veuillez patienter un moment dans la salle d'attente s'il vous plaît.",
+    "arabic_text": "يرجى الانتظار قليلاً في قاعة الانتظار من فضلك.",
+    "english_gloss": "Please wait a moment in the waiting room.",
+    "required_tokens": [
+      "قاعة انتظار",
+      "من فضلك"
+    ],
+    "intended_context": "Triage waiting instruction.",
+    "validation_status": "reference_verified",
+    "generation_mode": "phrase_library"
+  },
+  {
+    "sentence_id": "SEN-100",
+    "category": "Communication Guidance",
+    "french_text": "Tout est clair et bien noté, merci beaucoup pour votre accueil.",
+    "arabic_text": "كل شيء واضح ومفهوم، شكراً جزيلاً على حسن الاستقبال والمساعدة.",
+    "english_gloss": "Everything is clear and noted, thank you very much for your care.",
+    "required_tokens": [
+      "حسنا",
+      "فهم",
+      "شكرا",
+      "يساعد"
+    ],
+    "intended_context": "Final closing of healthcare consultation.",
+    "validation_status": "reference_verified",
+    "generation_mode": "dynamic_composition"
+  }
+]
