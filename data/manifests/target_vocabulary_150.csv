@@ -1,0 +1,151 @@
+﻿id,ar,fr,en,cat,ref,vdzsl,clips,status
+MED-001,صيدلية,Pharmacie,Pharmacy / Chemist,Location,Catalogue Dictionnaire LSA Univ Sétif / 3DZSignDB,,0,reference_verified
+MED-002,مستشفى,Hôpital,Hospital,Location,Dictionnaire LSA Ministère de la Solidarité (2017),,0,reference_verified
+MED-003,مستوصف,Dispensaire / Clinique,Clinic / Dispensary,Location,Dictionnaire LSA Ministère de la Solidarité (2017),,0,data_missing
+MED-004,مختبر,Laboratoire d'analyses,Laboratory,Location,VDzSL & 3DZSignDB,مختبر,20,data_available
+MED-005,عيادة,Cabinet médical,Doctor's Office / Surgery,Location,Dictionnaire LSA Univ Sétif,,0,data_missing
+MED-006,مكتب الاستقبال,Accueil / Triage,Reception / Triage desk,Location,Lexique LSA Santé,,0,data_missing
+MED-007,قاعة انتظار,Salle d'attente,Waiting room,Location,Lexique LSA Santé,,0,data_missing
+MED-008,صيدلية الحراسة,Pharmacie de garde,Night / Duty pharmacy,Location,Enquête de terrain pharmaciens Alger,,0,data_missing
+MED-009,قسم الأشعة,Radiologie / Imagerie,Radiology department,Location,Dictionnaire LSA 2017,,0,data_missing
+MED-010,بنك الدم,Banque du sang,Blood bank,Location,Dictionnaire LSA 2017,,0,data_missing
+MED-011,دواء,Médicament,Medicine / Medication,Pharmaceutical Item,Dictionnaire LSA 2017 / 3DZSignDB,,0,reference_verified
+MED-012,مرهم,Pommade / Crème,Ointment / Cream,Pharmaceutical Item,VDzSL & 3DZSignDB,مرهم,20,data_available
+MED-013,وصفة,Ordonnance,Prescription,Pharmaceutical Item,VDzSL & 3DZSignDB,وصفة,20,data_available
+MED-014,إبرة,Seringue / Injection,Needle / Syringe / Injection,Pharmaceutical Item,VDzSL & 3DZSignDB,إبرة,20,training_complete
+MED-015,كحول,Alcool chirurgical / Désinfectant,Medical alcohol / Antiseptic,Pharmaceutical Item,VDzSL & 3DZSignDB,كحول,20,training_complete
+MED-016,قرص,Comprimé / Gélule,Tablet / Pill / Capsule,Pharmaceutical Item,Dictionnaire LSA 2017,,0,reference_verified
+MED-017,شراب,Sirop,Syrup / Liquid medicine,Pharmaceutical Item,Dictionnaire LSA 2017,,0,reference_verified
+MED-018,قطرة,Gouttes (yeux / oreilles),Drops (eye / ear),Pharmaceutical Item,Dictionnaire LSA 2017,,0,data_missing
+MED-019,ضمادة,Pansement / Bande,Bandage / Dressing,Pharmaceutical Item,Dictionnaire LSA 2017,,0,reference_verified
+MED-020,ميزان حرارة,Thermomètre,Thermometer,Pharmaceutical Item,Dictionnaire LSA 2017,,0,data_missing
+MED-021,بخاخ,Inhalateur / Spray,Inhaler / Spray,Pharmaceutical Item,Lexique Asthme LSA,,0,data_missing
+MED-022,مضاد حيوي,Antibiotique,Antibiotic,Pharmaceutical Item,Lexique Pharmacie LSA,,0,data_missing
+MED-023,فيتامين,Vitamines,Vitamins,Pharmaceutical Item,Lexique Pharmacie LSA,,0,data_missing
+MED-024,مسكن,Antidouleur / Antalgique,Painkiller / Analgesic,Pharmaceutical Item,Lexique Pharmacie LSA,,0,data_missing
+MED-025,تحميلة,Suppositoire,Suppository,Pharmaceutical Item,Dictionnaire LSA 2017,,0,data_missing
+MED-026,ألم,Douleur,Pain / Ache,Symptom,VDzSL & 3DZSignDB,ألم,20,training_complete
+MED-027,حرارة,Fièvre,Fever / High temperature,Symptom,VDzSL & 3DZSignDB,حرارة,20,training_complete
+MED-028,مريض,Malade,Sick / Ill,Symptom,VDzSL & 3DZSignDB,مريض,20,training_complete
+MED-029,يشعر بالبرد,Frissons / Froid,Chills / Feeling cold,Symptom,VDzSL & 3DZSignDB,يشعر بالبرد,20,data_available
+MED-030,يعاني,Souffrir,Suffering,Symptom,VDzSL & 3DZSignDB,يعاني,20,data_available
+MED-031,متعب,Fatigue / Épuisement,Tired / Fatigue,Symptom,VDzSL & 3DZSignDB,متعب,20,data_available
+MED-032,سعال,Toux,Cough,Symptom,Dictionnaire LSA 2017 / 3DZSignDB,,0,reference_verified
+MED-033,غثيان,Nausée / Envie de vomir,Nausea,Symptom,Dictionnaire LSA 2017,,0,reference_verified
+MED-034,قيء,Vomissement,Vomiting,Symptom,Dictionnaire LSA 2017,,0,reference_verified
+MED-035,دوخة,Vertige / Étourdissement,Dizziness / Vertigo,Symptom,Dictionnaire LSA 2017,,0,reference_verified
+MED-036,إسهال,Diarrhée,Diarrhea,Symptom,Dictionnaire LSA 2017,,0,reference_verified
+MED-037,إمساك,Constipation,Constipation,Symptom,Dictionnaire LSA 2017,,0,data_missing
+MED-038,صداع,Migraine / Céphalée,Headache / Migraine,Symptom,Dictionnaire LSA 2017,,0,reference_verified
+MED-039,أرق,Insomnie / Troubles du sommeil,Insomnia,Symptom,Dictionnaire LSA 2017,,0,data_missing
+MED-040,حكة,Démangeaison / Prurit,Itching,Symptom,Dictionnaire LSA 2017,,0,reference_verified
+MED-041,التهاب الحلق,Mal de gorge / Pharyngite,Sore throat,Symptom,Dictionnaire LSA 2017,,0,reference_verified
+MED-042,سمنة,Obésité / Surpoids,Obesity,Symptom,VDzSL & 3DZSignDB,سمنة,20,data_available
+MED-043,سيلان الأنف,Écoulement nasal / Rhume,Runny nose,Symptom,Dictionnaire LSA 2017,,0,reference_verified
+MED-044,انتفاخ,Gonflement / Œdème,Swelling / Bloating,Symptom,Dictionnaire LSA 2017,,0,reference_verified
+MED-045,حرقان المعدة,Brûlures d'estomac / Acidité,Heartburn / Acid reflux,Symptom,Dictionnaire LSA 2017,,0,data_missing
+MED-046,رأس,Tête,Head,Anatomy,VDzSL & 3DZSignDB,رأس,20,training_complete
+MED-047,أذن,Oreille,Ear,Anatomy,VDzSL & 3DZSignDB,أذن,20,training_complete
+MED-048,عين,Œil / Yeux,Eye / Eyes,Anatomy,Dictionnaire LSA 2017 / 3DZSignDB,,0,reference_verified
+MED-049,أنف,Nez,Nose,Anatomy,VDzSL & 3DZSignDB,أنف,20,data_available
+MED-050,فم,Bouche,Mouth,Anatomy,Dictionnaire LSA 2017,,0,reference_verified
+MED-051,أسنان,Dents,Teeth,Anatomy,Dictionnaire LSA 2017 / 3DZSignDB,,0,reference_verified
+MED-052,قلب,Cœur,Heart,Anatomy,VDzSL & 3DZSignDB,قلب,20,training_complete
+MED-053,جسم,Corps,Body,Anatomy,VDzSL & 3DZSignDB,جسم,20,training_complete
+MED-054,يد,Main,Hand,Anatomy,VDzSL & 3DZSignDB,يد,20,training_complete
+MED-055,بشرة,Peau,Skin,Anatomy,VDzSL & 3DZSignDB,بشرة,20,training_complete
+MED-056,شعر,Cheveux,Hair,Anatomy,VDzSL & 3DZSignDB,شعر,20,data_available
+MED-057,صدر,Poitrine / Thorax,Chest,Anatomy,Dictionnaire LSA 2017,,0,reference_verified
+MED-058,بطن,Ventre / Abdomen,Stomach / Belly,Anatomy,Dictionnaire LSA 2017,,0,reference_verified
+MED-059,ظهر,Dos,Back,Anatomy,Dictionnaire LSA 2017,,0,reference_verified
+MED-060,رجل,Jambe / Pied,Leg / Foot,Anatomy,Dictionnaire LSA 2017,,0,reference_verified
+MED-061,حساسية,Allergie,Allergy,Chronic Condition,Dictionnaire LSA 2017 / 3DZSignDB,,0,reference_verified
+MED-062,سكر,Diabète / Sucre,Diabetes / Sugar,Chronic Condition,VDzSL & 3DZSignDB,سكر,20,training_complete
+MED-063,ضغط الدم,Hypertension / Tension artérielle,Blood pressure / Hypertension,Chronic Condition,Dictionnaire LSA 2017,,0,reference_verified
+MED-064,ربو,Asthme,Asthma,Chronic Condition,Dictionnaire LSA 2017,,0,reference_verified
+MED-065,قصور كلوي,Insuffisance rénale / Rein,Kidney condition,Chronic Condition,Dictionnaire LSA 2017,,0,data_missing
+MED-066,حساسية البنسلين,Allergie Pénicilline,Penicillin allergy,Chronic Condition,Enquête médicale LSA,,0,data_missing
+MED-067,صرع,Épilepsie,Epilepsy,Chronic Condition,Dictionnaire LSA 2017,,0,data_missing
+MED-068,فقر الدم,Anémie,Anemia,Chronic Condition,Dictionnaire LSA 2017,,0,data_missing
+MED-069,طفح جلدي,Éruption cutanée / Eczéma,Rash / Eczema,Chronic Condition,Dictionnaire LSA 2017,,0,data_missing
+MED-070,قرحة المعدة,Ulcère gastrique,Stomach ulcer,Chronic Condition,Dictionnaire LSA 2017,,0,data_missing
+MED-071,1,Un (1),One (1),Dosage,VDzSL,1,20,training_complete
+MED-072,2,Deux (2),Two (2),Dosage,VDzSL,2,20,training_complete
+MED-073,3,Trois (3),Three (3),Dosage,VDzSL,3,20,training_complete
+MED-074,4,Quatre (4),Four (4),Dosage,VDzSL,4,20,data_available
+MED-075,5,Cinq (5),Five (5),Dosage,VDzSL,5,20,data_available
+MED-076,10,Dix (10),Ten (10),Dosage,VDzSL,10,20,data_available
+MED-077,نصف,Demi (1/2),Half,Dosage,VDzSL & 3DZSignDB,نصف,20,training_complete
+MED-078,كل يوم,Chaque jour / Quotidien,Every day / Daily,Dosage,VDzSL & 3DZSignDB,كل يوم,20,training_complete
+MED-079,صباح,Matin,Morning,Dosage,VDzSL & 3DZSignDB,صباح,20,training_complete
+MED-080,الليل,Nuit / Soir,Night / Evening,Dosage,VDzSL & 3DZSignDB,الليل,20,training_complete
+MED-081,منتصف الليل,Minuit,Midnight,Dosage,VDzSL & 3DZSignDB,منتصف الليل,20,data_available
+MED-082,ماء,Avec de l'eau,Water (take with),Dosage,VDzSL,ماء,20,training_complete
+MED-083,طعام,Avec le repas,Food / Meal (take with),Dosage,VDzSL,طعام,20,training_complete
+MED-084,قبل الأكل,Avant le repas (à jeun),Before meal / Fasting,Dosage,Dictionnaire LSA 2017,,0,reference_verified
+MED-085,بعد الأكل,Après le repas,After meal,Dosage,Dictionnaire LSA 2017,,0,reference_verified
+MED-086,طبيب,Médecin,Doctor / Physician,Professional,Dictionnaire LSA 2017 / 3DZSignDB,,0,reference_verified
+MED-087,طبيب أسنان,Dentiste,Dentist,Professional,VDzSL & 3DZSignDB,طبيب أسنان,20,training_complete
+MED-088,صيدلي,Pharmacien,Pharmacist,Professional,Dictionnaire LSA 2017,,0,reference_verified
+MED-089,ممرض,Infirmier,Nurse,Professional,Dictionnaire LSA 2017,,0,reference_verified
+MED-090,جراح,Chirurgien,Surgeon,Professional,Dictionnaire LSA 2017,,0,data_missing
+MED-091,حامل,Femme enceinte / Grossesse,Pregnant / Pregnancy,Patient State,Dictionnaire LSA 2017,,0,reference_verified
+MED-092,رضاعة,Allaitement,Breastfeeding,Patient State,Dictionnaire LSA 2017,,0,data_missing
+MED-093,رضيع,Bébé / Nourrisson,Baby / Infant,Patient State,Dictionnaire LSA 2017,,0,reference_verified
+MED-094,طفل,Enfant,Child,Patient State,VDzSL & 3DZSignDB,طفل,20,data_available
+MED-095,مسن,Personne âgée,Elderly / Senior,Patient State,Dictionnaire LSA 2017,,0,data_missing
+MED-096,كم,Combien (prix / dose),How much (cost / dose),Counter Service,VDzSL,كم,20,training_complete
+MED-097,مال,Prix / Argent,Price / Money,Counter Service,VDzSL,مال,20,training_complete
+MED-098,بطاقة الشفاء,Carte Chifa (sécurité sociale),Chifa social security card,Counter Service,Usage pharmacy Algérie,,0,data_missing
+MED-099,يفحص,Examiner / Ausculter,Examine / Medical checkup,Professional Action,VDzSL,يفحص,20,data_available
+MED-100,يغسل,Laver / Désinfecter les mains,Wash / Disinfect hands,Hygiene,VDzSL,يغسل,20,data_available
+EMG-001,خطر,Danger / Urgence,Danger / Emergency,Urgency,VDzSL & 3DZSignDB,خطر,20,training_complete
+EMG-002,يساعد,Au secours / Aider,Help / Assist urgently,Urgency,VDzSL & 3DZSignDB,يساعد,20,training_complete
+EMG-003,ينقذ,Sauver / Secourir,Save / Rescue,Urgency,VDzSL & 3DZSignDB,ينقذ,20,data_available
+EMG-004,حادث,Accident grave,Accident / Crash,Trauma,VDzSL & 3DZSignDB,حادث,20,data_available
+EMG-005,يتصل هاتفيا,Appeler au téléphone (secours),Call phone (emergency),Action,VDzSL & 3DZSignDB,يتصل هاتفيا,20,data_available
+EMG-006,إسعاف,Ambulance / Protection Civile,Ambulance / Paramedics,Emergency Service,Dictionnaire LSA 2017,,0,reference_verified
+EMG-007,الآن,Tout de suite / Immédiatement,Immediately / Right now,Temporal,VDzSL,الآن,20,training_complete
+EMG-008,مستعجل,Urgent,Urgent,Urgency,Dictionnaire LSA 2017,,0,reference_verified
+EMG-009,نزيف,Hémorragie / Saignement abondant,Bleeding / Severe hemorrhage,Trauma,Dictionnaire LSA 2017,,0,reference_verified
+EMG-010,دم,Sang,Blood,Trauma,Dictionnaire LSA 2017 / 3DZSignDB,,0,reference_verified
+EMG-011,كسر,Fracture osseuse,Bone fracture / Broken bone,Trauma,Dictionnaire LSA 2017,,0,reference_verified
+EMG-012,حروق,Brûlure grave,Severe burn,Trauma,Dictionnaire LSA 2017,,0,reference_verified
+EMG-013,ألم حاد في الصدر,Douleur thoracique aiguë / Crise cardiaque,Acute chest pain / Heart attack,Cardiac Emergency,Enquête urgentistes LSA,,0,data_missing
+EMG-014,جرح عميق,Plaie profonde / Coupure,Deep wound / Laceration,Trauma,Dictionnaire LSA 2017,,0,data_missing
+EMG-015,سقوط,Chute violente,Severe fall,Trauma,Dictionnaire LSA 2017,,0,data_missing
+EMG-016,ضربة في الرأس,Traumatisme crânien / Choc à la tête,Head trauma / Concussion,Trauma,Enquête médicale LSA,,0,data_missing
+EMG-017,صعوبة في التنفس,Détresse respiratoire / Étouffement,Breathing difficulty / Choking,Respiratory,Dictionnaire LSA 2017,,0,reference_verified
+EMG-018,غيبوبة,Perte de connaissance / Évanouissement,Loss of consciousness / Fainting,Neurological,Dictionnaire LSA 2017,,0,reference_verified
+EMG-019,تشنج,Convulsion / Crise d'épilepsie,Convulsion / Seizure,Neurological,Dictionnaire LSA 2017,,0,data_missing
+EMG-020,تسمم,Intoxication / Empoisonnement,Poisoning / Intoxication,Toxicology,Dictionnaire LSA 2017,,0,reference_verified
+EMG-021,صدمة حساسية,Choc anaphylactique,Anaphylactic shock,Allergy Emergency,Enquête médicale LSA,,0,data_missing
+EMG-022,اختناق,Asphyxie / Suffocation,Suffocation / Asphyxiation,Respiratory,Dictionnaire LSA 2017,,0,data_missing
+EMG-023,شلل مفاجئ,Paralysie brutale (AVC),Sudden paralysis / Stroke,Neurological,Enquête urgentistes LSA,,0,data_missing
+EMG-024,ضربة شمس,Insolation sévère,Heatstroke,Environmental,Dictionnaire LSA 2017,,0,data_missing
+EMG-025,الحماية المدنية,Protection Civile (14 / 1021),Civil Protection (Algeria 14),Service,Usage national algérien,,0,data_missing
+EMG-026,مصلحة الاستعجالات,Service des Urgences (CHU),Emergency Room / ER,Location,Dictionnaire LSA 2017,,0,reference_verified
+EMG-027,الإنعاش,Réanimation / Soins intensifs,Intensive Care Unit (ICU),Location,Dictionnaire LSA 2017,,0,data_missing
+EMG-028,موت,Décès / Danger de mort,Death / Fatal risk,Critical Status,VDzSL & 3DZSignDB,موت,20,data_available
+EMG-029,تحذير,Attention / Alerte,Warning / Alert,Warning,VDzSL & 3DZSignDB,تحذير,20,data_available
+EMG-030,توقف,Arrêter / Stop (hémorragie/médicament),Stop immediately,Action,VDzSL,توقف,20,data_available
+GEN-001,من فضلك,S'il vous plaît,Please,Politeness,VDzSL & 3DZSignDB,من فضلك,20,training_complete
+GEN-002,شكرا,Merci,Thank you,Politeness,VDzSL & 3DZSignDB,شكرا,20,training_complete
+GEN-003,نعم,Oui,Yes,Confirmation,VDzSL & 3DZSignDB,نعم,20,training_complete
+GEN-004,لا,Non,No,Confirmation,VDzSL & 3DZSignDB,لا,20,training_complete
+GEN-005,حسنا,D'accord / Bien reçu,Okay / Understood,Confirmation,VDzSL & 3DZSignDB,حسنا,20,training_complete
+GEN-006,سؤال,Question / J'ai une question,Question,Clarification,VDzSL & 3DZSignDB,سؤال,20,data_available
+GEN-007,يجيب,Répondre / Réponse,Answer / Reply,Clarification,VDzSL & 3DZSignDB,يجيب,20,data_available
+GEN-008,فهم,Comprendre / J'ai compris,Understand,Clarification,VDzSL & 3DZSignDB,فهم,20,data_available
+GEN-009,يشرح,Expliquer / Pouvez-vous expliquer ?,Explain,Clarification,VDzSL & 3DZSignDB,يشرح,20,data_available
+GEN-010,يكرر,Répéter / Répétez s'il vous plaît,Repeat,Clarification,VDzSL & 3DZSignDB,يكرر,20,data_available
+GEN-011,يطلب,Demander / Besoin de,Ask for / Request,Assistance,VDzSL,يطلب,20,data_available
+GEN-012,ينتبه,Attention / Soyez vigilant,Pay attention / Be careful,Safety,VDzSL,ينتبه,20,data_available
+GEN-013,مشكلة,Problème / J'ai un souci,Problem,Assistance,VDzSL & 3DZSignDB,مشكلة,20,data_available
+GEN-014,ينسى,Oublier / J'ai oublié ma dose,Forget / Missed dose,Medication Adherence,VDzSL,ينسى,20,data_available
+GEN-015,يدخن,Tabac / Fumer,Smoking / Tobacco,Lifestyle Context,VDzSL,يدخن,20,data_available
+GEN-016,اليوم,Aujourd'hui,Today,Scheduling,VDzSL & 3DZSignDB,اليوم,20,data_available
+GEN-017,غدا,Demain,Tomorrow,Scheduling,VDzSL & 3DZSignDB,غدا,20,data_available
+GEN-018,اكتب لي,Écrivez-moi sur papier,Write it down for me,Accessibility,Stratégie de communication LSA,,0,data_missing
+GEN-019,أرني,Montrez-moi sur la boîte,Show me on packaging,Accessibility,Stratégie de communication LSA,,0,data_missing
+GEN-020,ببطء,Plus lentement s'il vous plaît,More slowly please,Communication,VDzSL,ببطء,20,data_available
