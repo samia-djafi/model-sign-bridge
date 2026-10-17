@@ -90,7 +90,7 @@ pip install -e . --no-deps
 ```powershell
 pytest
 ```
-All 15 tests verify Unicode label parsing, whitespace normalization, uniform frame sampling, and leakage-aware data splitting.
+All 29 tests verify Unicode label parsing, whitespace normalization, uniform frame sampling, leakage-aware data splitting, landmark feature extraction, hand skeleton visualization, and clinical session management.
 
 ---
 
@@ -119,15 +119,19 @@ Creates:
 
 ### 4. Extract and Cache Features
 ```powershell
+# Extract landmark features with multiprocessing (recommended, 3453-dim):
+python scripts/preprocess_videos.py --mode landmark --workers 4
+
+# Or extract legacy pixel motion features (4096-dim):
 python scripts/preprocess_videos.py --mode pixel
 ```
-Extracts spatio-temporal pixel motion features (uniform 16 frames, 32x32 grayscale, motion energy) into `data/processed/features_mvp_pixel.npz` (1.59 MB).
+Extracts scale-normalized MediaPipe hand & pose landmarks with temporal trajectory dynamics into `data/processed/features_mvp_landmark.npz` (5.38 MB).
 
 ### 5. Train & Benchmark Classifiers
 ```powershell
 python scripts/train_classifier.py
 ```
-Trains and compares Linear SVM, Logistic Regression, Random Forest, and MLP across in-domain and generalization protocols, saving `artifacts/classifier/best_model.joblib`.
+Trains and benchmarks Linear SVM, Logistic Regression, Random Forest, and MLP across in-domain and generalization protocols, achieving **67.71% in-domain accuracy**, **65.62% on unseen avatars**, and **58.59% on unseen camera angles**, saving `artifacts/classifier/best_model.joblib`.
 
 ### 6. Predict on a Video File
 ```powershell
@@ -143,6 +147,7 @@ python scripts/webcam_recognition.py --camera-id 0
 # Or simulating live input using a video clip:
 python scripts/webcam_recognition.py --video-simulation "data/VDzSL/signer0/cam0/ألم.mp4"
 ```
+Features real-time 21 hand landmarks and anatomical skeleton overlay, confidence gating, debounced clinical slot-filling (`ClinicalAssembler`), and interactive controls (`[P]` Pause/Resume, `[C]` Clear, `[F]` Finalize Fiche Comptoir, `[Q]` Exit).
 
 ---
 
