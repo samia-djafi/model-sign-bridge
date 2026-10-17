@@ -1,7 +1,7 @@
 {
   "model_name": "Linear SVM",
   "model_type": "linear_svm",
-  "feature_dim": 4096,
+  "feature_dim": 3453,
   "num_classes": 32,
   "target_names": [
     "1",
@@ -38,20 +38,15 @@
     "يساعد"
   ],
   "artifact_file": "best_model.joblib",
-  "artifact_size_kb": 595.8466796875,
+  "artifact_size_kb": 833.271484375,
   "train_samples": 448,
   "test_samples": 96,
-  "test_accuracy": 0.17708333333333334,
-  "test_macro_f1": 0.18891369047619047,
-  "mean_latency_ms": 0.8805642525355021,
+  "test_accuracy": 0.6770833333333334,
+  "test_macro_f1": 0.6615575396825397,
+  "mean_latency_ms": 1.1494358380635579,
   "preprocessing_config": {
     "num_frames": 16,
-    "target_size": [
-      32,
-      32
-    ],
-    "grayscale": true,
-    "normalize": true,
-    "feature_type": "spatio_temporal_pixel_motion"
+    "feature_type": "landmark",
+    "include_temporal_summary": true
   }
 }
