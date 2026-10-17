@@ -1,0 +1,18 @@
+{
+  "total_sentences": 100,
+  "category_distribution": {
+    "Symptoms & Pain": 20,
+    "Pharmacy Requests": 18,
+    "Medication & Dosage": 16,
+    "Emergencies & Urgent Help": 16,
+    "Allergies & Contraindications": 14,
+    "Patient States": 8,
+    "Communication Guidance": 8
+  },
+  "generation_modes": {
+    "phrase_library": 70,
+    "dynamic_composition": 30
+  },
+  "json_path": "data\\manifests\\healthcare_sentences_100.json",
+  "csv_path": "data\\manifests\\healthcare_sentences_100.csv"
+}
