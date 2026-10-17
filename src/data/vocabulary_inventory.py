@@ -1,0 +1,286 @@
+"""
+Comprehensive Target Vocabulary Inventory for BridgeSign Algerian Sign Language (LSA).
+
+Target scope: Exactly 150 unique healthcare, emergency, and communication concepts:
+- 100 Medical & Pharmacy Concepts (MED-001 to MED-100)
+- 30 Emergency Concepts (EMG-001 to EMG-030)
+- 20 General Healthcare & Communication Concepts (GEN-001 to GEN-020)
+
+Status lifecycle:
+- 'training_complete' : Part of the trained landmark classifier model
+- 'data_available'    : Video clips present in VDzSL (20 clips across 4 avatars/5 cameras)
+- 'reference_verified': Documented in Algerian Sign Language Lexicon / 3DZSignDB SiGML
+- 'data_missing'      : Essential clinical concept requiring field recordings
+- 'signer_validated'  : Validated by deaf community / LSA fluent informants
+"""
+
+import json
+import os
+from typing import Any, Dict, List, Optional
+import pandas as pd
+
+
+# 100 Medical and Pharmacy Concepts
+MEDICAL_PHARMACY_100: List[Dict[str, Any]] = [
+    # Pharmacy & Healthcare Locations (1-10)
+    {"id": "MED-001", "ar": "صيدلية", "fr": "Pharmacie", "en": "Pharmacy / Chemist", "cat": "Location", "ref": "Catalogue Dictionnaire LSA Univ Sétif / 3DZSignDB", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-002", "ar": "مستشفى", "fr": "Hôpital", "en": "Hospital", "cat": "Location", "ref": "Dictionnaire LSA Ministère de la Solidarité (2017)", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-003", "ar": "مستوصف", "fr": "Dispensaire / Clinique", "en": "Clinic / Dispensary", "cat": "Location", "ref": "Dictionnaire LSA Ministère de la Solidarité (2017)", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-004", "ar": "مختبر", "fr": "Laboratoire d'analyses", "en": "Laboratory", "cat": "Location", "ref": "VDzSL & 3DZSignDB", "vdzsl": "مختبر", "clips": 20, "status": "data_available"},
+    {"id": "MED-005", "ar": "عيادة", "fr": "Cabinet médical", "en": "Doctor's Office / Surgery", "cat": "Location", "ref": "Dictionnaire LSA Univ Sétif", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-006", "ar": "مكتب الاستقبال", "fr": "Accueil / Triage", "en": "Reception / Triage desk", "cat": "Location", "ref": "Lexique LSA Santé", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-007", "ar": "قاعة انتظار", "fr": "Salle d'attente", "en": "Waiting room", "cat": "Location", "ref": "Lexique LSA Santé", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-008", "ar": "صيدلية الحراسة", "fr": "Pharmacie de garde", "en": "Night / Duty pharmacy", "cat": "Location", "ref": "Enquête de terrain pharmaciens Alger", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-009", "ar": "قسم الأشعة", "fr": "Radiologie / Imagerie", "en": "Radiology department", "cat": "Location", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-010", "ar": "بنك الدم", "fr": "Banque du sang", "en": "Blood bank", "cat": "Location", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+
+    # Medicines & Pharmaceutical Items (11-25)
+    {"id": "MED-011", "ar": "دواء", "fr": "Médicament", "en": "Medicine / Medication", "cat": "Pharmaceutical Item", "ref": "Dictionnaire LSA 2017 / 3DZSignDB", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-012", "ar": "مرهم", "fr": "Pommade / Crème", "en": "Ointment / Cream", "cat": "Pharmaceutical Item", "ref": "VDzSL & 3DZSignDB", "vdzsl": "مرهم", "clips": 20, "status": "data_available"},
+    {"id": "MED-013", "ar": "وصفة", "fr": "Ordonnance", "en": "Prescription", "cat": "Pharmaceutical Item", "ref": "VDzSL & 3DZSignDB", "vdzsl": "وصفة", "clips": 20, "status": "data_available"},
+    {"id": "MED-014", "ar": "إبرة", "fr": "Seringue / Injection", "en": "Needle / Syringe / Injection", "cat": "Pharmaceutical Item", "ref": "VDzSL & 3DZSignDB", "vdzsl": "إبرة", "clips": 20, "status": "training_complete"},
+    {"id": "MED-015", "ar": "كحول", "fr": "Alcool chirurgical / Désinfectant", "en": "Medical alcohol / Antiseptic", "cat": "Pharmaceutical Item", "ref": "VDzSL & 3DZSignDB", "vdzsl": "كحول", "clips": 20, "status": "training_complete"},
+    {"id": "MED-016", "ar": "قرص", "fr": "Comprimé / Gélule", "en": "Tablet / Pill / Capsule", "cat": "Pharmaceutical Item", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-017", "ar": "شراب", "fr": "Sirop", "en": "Syrup / Liquid medicine", "cat": "Pharmaceutical Item", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-018", "ar": "قطرة", "fr": "Gouttes (yeux / oreilles)", "en": "Drops (eye / ear)", "cat": "Pharmaceutical Item", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-019", "ar": "ضمادة", "fr": "Pansement / Bande", "en": "Bandage / Dressing", "cat": "Pharmaceutical Item", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-020", "ar": "ميزان حرارة", "fr": "Thermomètre", "en": "Thermometer", "cat": "Pharmaceutical Item", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-021", "ar": "بخاخ", "fr": "Inhalateur / Spray", "en": "Inhaler / Spray", "cat": "Pharmaceutical Item", "ref": "Lexique Asthme LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-022", "ar": "مضاد حيوي", "fr": "Antibiotique", "en": "Antibiotic", "cat": "Pharmaceutical Item", "ref": "Lexique Pharmacie LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-023", "ar": "فيتامين", "fr": "Vitamines", "en": "Vitamins", "cat": "Pharmaceutical Item", "ref": "Lexique Pharmacie LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-024", "ar": "مسكن", "fr": "Antidouleur / Antalgique", "en": "Painkiller / Analgesic", "cat": "Pharmaceutical Item", "ref": "Lexique Pharmacie LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-025", "ar": "تحميلة", "fr": "Suppositoire", "en": "Suppository", "cat": "Pharmaceutical Item", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+
+    # Symptoms and Pain (26-45)
+    {"id": "MED-026", "ar": "ألم", "fr": "Douleur", "en": "Pain / Ache", "cat": "Symptom", "ref": "VDzSL & 3DZSignDB", "vdzsl": "ألم", "clips": 20, "status": "training_complete"},
+    {"id": "MED-027", "ar": "حرارة", "fr": "Fièvre", "en": "Fever / High temperature", "cat": "Symptom", "ref": "VDzSL & 3DZSignDB", "vdzsl": "حرارة", "clips": 20, "status": "training_complete"},
+    {"id": "MED-028", "ar": "مريض", "fr": "Malade", "en": "Sick / Ill", "cat": "Symptom", "ref": "VDzSL & 3DZSignDB", "vdzsl": "مريض", "clips": 20, "status": "training_complete"},
+    {"id": "MED-029", "ar": "يشعر بالبرد", "fr": "Frissons / Froid", "en": "Chills / Feeling cold", "cat": "Symptom", "ref": "VDzSL & 3DZSignDB", "vdzsl": "يشعر بالبرد", "clips": 20, "status": "data_available"},
+    {"id": "MED-030", "ar": "يعاني", "fr": "Souffrir", "en": "Suffering", "cat": "Symptom", "ref": "VDzSL & 3DZSignDB", "vdzsl": "يعاني", "clips": 20, "status": "data_available"},
+    {"id": "MED-031", "ar": "متعب", "fr": "Fatigue / Épuisement", "en": "Tired / Fatigue", "cat": "Symptom", "ref": "VDzSL & 3DZSignDB", "vdzsl": "متعب", "clips": 20, "status": "data_available"},
+    {"id": "MED-032", "ar": "سعال", "fr": "Toux", "en": "Cough", "cat": "Symptom", "ref": "Dictionnaire LSA 2017 / 3DZSignDB", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-033", "ar": "غثيان", "fr": "Nausée / Envie de vomir", "en": "Nausea", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-034", "ar": "قيء", "fr": "Vomissement", "en": "Vomiting", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-035", "ar": "دوخة", "fr": "Vertige / Étourdissement", "en": "Dizziness / Vertigo", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-036", "ar": "إسهال", "fr": "Diarrhée", "en": "Diarrhea", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-037", "ar": "إمساك", "fr": "Constipation", "en": "Constipation", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-038", "ar": "صداع", "fr": "Migraine / Céphalée", "en": "Headache / Migraine", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-039", "ar": "أرق", "fr": "Insomnie / Troubles du sommeil", "en": "Insomnia", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-040", "ar": "حكة", "fr": "Démangeaison / Prurit", "en": "Itching", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-041", "ar": "التهاب الحلق", "fr": "Mal de gorge / Pharyngite", "en": "Sore throat", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-042", "ar": "سمنة", "fr": "Obésité / Surpoids", "en": "Obesity", "cat": "Symptom", "ref": "VDzSL & 3DZSignDB", "vdzsl": "سمنة", "clips": 20, "status": "data_available"},
+    {"id": "MED-043", "ar": "سيلان الأنف", "fr": "Écoulement nasal / Rhume", "en": "Runny nose", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-044", "ar": "انتفاخ", "fr": "Gonflement / Œdème", "en": "Swelling / Bloating", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-045", "ar": "حرقان المعدة", "fr": "Brûlures d'estomac / Acidité", "en": "Heartburn / Acid reflux", "cat": "Symptom", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+
+    # Body Parts / Anatomy (46-60)
+    {"id": "MED-046", "ar": "رأس", "fr": "Tête", "en": "Head", "cat": "Anatomy", "ref": "VDzSL & 3DZSignDB", "vdzsl": "رأس", "clips": 20, "status": "training_complete"},
+    {"id": "MED-047", "ar": "أذن", "fr": "Oreille", "en": "Ear", "cat": "Anatomy", "ref": "VDzSL & 3DZSignDB", "vdzsl": "أذن", "clips": 20, "status": "training_complete"},
+    {"id": "MED-048", "ar": "عين", "fr": "Œil / Yeux", "en": "Eye / Eyes", "cat": "Anatomy", "ref": "Dictionnaire LSA 2017 / 3DZSignDB", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-049", "ar": "أنف", "fr": "Nez", "en": "Nose", "cat": "Anatomy", "ref": "VDzSL & 3DZSignDB", "vdzsl": "أنف", "clips": 20, "status": "data_available"},
+    {"id": "MED-050", "ar": "فم", "fr": "Bouche", "en": "Mouth", "cat": "Anatomy", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-051", "ar": "أسنان", "fr": "Dents", "en": "Teeth", "cat": "Anatomy", "ref": "Dictionnaire LSA 2017 / 3DZSignDB", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-052", "ar": "قلب", "fr": "Cœur", "en": "Heart", "cat": "Anatomy", "ref": "VDzSL & 3DZSignDB", "vdzsl": "قلب", "clips": 20, "status": "training_complete"},
+    {"id": "MED-053", "ar": "جسم", "fr": "Corps", "en": "Body", "cat": "Anatomy", "ref": "VDzSL & 3DZSignDB", "vdzsl": "جسم", "clips": 20, "status": "training_complete"},
+    {"id": "MED-054", "ar": "يد", "fr": "Main", "en": "Hand", "cat": "Anatomy", "ref": "VDzSL & 3DZSignDB", "vdzsl": "يد", "clips": 20, "status": "training_complete"},
+    {"id": "MED-055", "ar": "بشرة", "fr": "Peau", "en": "Skin", "cat": "Anatomy", "ref": "VDzSL & 3DZSignDB", "vdzsl": "بشرة", "clips": 20, "status": "training_complete"},
+    {"id": "MED-056", "ar": "شعر", "fr": "Cheveux", "en": "Hair", "cat": "Anatomy", "ref": "VDzSL & 3DZSignDB", "vdzsl": "شعر", "clips": 20, "status": "data_available"},
+    {"id": "MED-057", "ar": "صدر", "fr": "Poitrine / Thorax", "en": "Chest", "cat": "Anatomy", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-058", "ar": "بطن", "fr": "Ventre / Abdomen", "en": "Stomach / Belly", "cat": "Anatomy", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-059", "ar": "ظهر", "fr": "Dos", "en": "Back", "cat": "Anatomy", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-060", "ar": "رجل", "fr": "Jambe / Pied", "en": "Leg / Foot", "cat": "Anatomy", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+
+    # Allergies and Chronic Conditions (61-70)
+    {"id": "MED-061", "ar": "حساسية", "fr": "Allergie", "en": "Allergy", "cat": "Chronic Condition", "ref": "Dictionnaire LSA 2017 / 3DZSignDB", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-062", "ar": "سكر", "fr": "Diabète / Sucre", "en": "Diabetes / Sugar", "cat": "Chronic Condition", "ref": "VDzSL & 3DZSignDB", "vdzsl": "سكر", "clips": 20, "status": "training_complete"},
+    {"id": "MED-063", "ar": "ضغط الدم", "fr": "Hypertension / Tension artérielle", "en": "Blood pressure / Hypertension", "cat": "Chronic Condition", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-064", "ar": "ربو", "fr": "Asthme", "en": "Asthma", "cat": "Chronic Condition", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-065", "ar": "قصور كلوي", "fr": "Insuffisance rénale / Rein", "en": "Kidney condition", "cat": "Chronic Condition", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-066", "ar": "حساسية البنسلين", "fr": "Allergie Pénicilline", "en": "Penicillin allergy", "cat": "Chronic Condition", "ref": "Enquête médicale LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-067", "ar": "صرع", "fr": "Épilepsie", "en": "Epilepsy", "cat": "Chronic Condition", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-068", "ar": "فقر الدم", "fr": "Anémie", "en": "Anemia", "cat": "Chronic Condition", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-069", "ar": "طفح جلدي", "fr": "Éruption cutanée / Eczéma", "en": "Rash / Eczema", "cat": "Chronic Condition", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-070", "ar": "قرحة المعدة", "fr": "Ulcère gastrique", "en": "Stomach ulcer", "cat": "Chronic Condition", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+
+    # Dosage and Administration Instructions (71-85)
+    {"id": "MED-071", "ar": "1", "fr": "Un (1)", "en": "One (1)", "cat": "Dosage", "ref": "VDzSL", "vdzsl": "1", "clips": 20, "status": "training_complete"},
+    {"id": "MED-072", "ar": "2", "fr": "Deux (2)", "en": "Two (2)", "cat": "Dosage", "ref": "VDzSL", "vdzsl": "2", "clips": 20, "status": "training_complete"},
+    {"id": "MED-073", "ar": "3", "fr": "Trois (3)", "en": "Three (3)", "cat": "Dosage", "ref": "VDzSL", "vdzsl": "3", "clips": 20, "status": "training_complete"},
+    {"id": "MED-074", "ar": "4", "fr": "Quatre (4)", "en": "Four (4)", "cat": "Dosage", "ref": "VDzSL", "vdzsl": "4", "clips": 20, "status": "data_available"},
+    {"id": "MED-075", "ar": "5", "fr": "Cinq (5)", "en": "Five (5)", "cat": "Dosage", "ref": "VDzSL", "vdzsl": "5", "clips": 20, "status": "data_available"},
+    {"id": "MED-076", "ar": "10", "fr": "Dix (10)", "en": "Ten (10)", "cat": "Dosage", "ref": "VDzSL", "vdzsl": "10", "clips": 20, "status": "data_available"},
+    {"id": "MED-077", "ar": "نصف", "fr": "Demi (1/2)", "en": "Half", "cat": "Dosage", "ref": "VDzSL & 3DZSignDB", "vdzsl": "نصف", "clips": 20, "status": "training_complete"},
+    {"id": "MED-078", "ar": "كل يوم", "fr": "Chaque jour / Quotidien", "en": "Every day / Daily", "cat": "Dosage", "ref": "VDzSL & 3DZSignDB", "vdzsl": "كل يوم", "clips": 20, "status": "training_complete"},
+    {"id": "MED-079", "ar": "صباح", "fr": "Matin", "en": "Morning", "cat": "Dosage", "ref": "VDzSL & 3DZSignDB", "vdzsl": "صباح", "clips": 20, "status": "training_complete"},
+    {"id": "MED-080", "ar": "الليل", "fr": "Nuit / Soir", "en": "Night / Evening", "cat": "Dosage", "ref": "VDzSL & 3DZSignDB", "vdzsl": "الليل", "clips": 20, "status": "training_complete"},
+    {"id": "MED-081", "ar": "منتصف الليل", "fr": "Minuit", "en": "Midnight", "cat": "Dosage", "ref": "VDzSL & 3DZSignDB", "vdzsl": "منتصف الليل", "clips": 20, "status": "data_available"},
+    {"id": "MED-082", "ar": "ماء", "fr": "Avec de l'eau", "en": "Water (take with)", "cat": "Dosage", "ref": "VDzSL", "vdzsl": "ماء", "clips": 20, "status": "training_complete"},
+    {"id": "MED-083", "ar": "طعام", "fr": "Avec le repas", "en": "Food / Meal (take with)", "cat": "Dosage", "ref": "VDzSL", "vdzsl": "طعام", "clips": 20, "status": "training_complete"},
+    {"id": "MED-084", "ar": "قبل الأكل", "fr": "Avant le repas (à jeun)", "en": "Before meal / Fasting", "cat": "Dosage", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-085", "ar": "بعد الأكل", "fr": "Après le repas", "en": "After meal", "cat": "Dosage", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+
+    # Healthcare Professionals and Counter Service (86-100)
+    {"id": "MED-086", "ar": "طبيب", "fr": "Médecin", "en": "Doctor / Physician", "cat": "Professional", "ref": "Dictionnaire LSA 2017 / 3DZSignDB", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-087", "ar": "طبيب أسنان", "fr": "Dentiste", "en": "Dentist", "cat": "Professional", "ref": "VDzSL & 3DZSignDB", "vdzsl": "طبيب أسنان", "clips": 20, "status": "training_complete"},
+    {"id": "MED-088", "ar": "صيدلي", "fr": "Pharmacien", "en": "Pharmacist", "cat": "Professional", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-089", "ar": "ممرض", "fr": "Infirmier", "en": "Nurse", "cat": "Professional", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-090", "ar": "جراح", "fr": "Chirurgien", "en": "Surgeon", "cat": "Professional", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-091", "ar": "حامل", "fr": "Femme enceinte / Grossesse", "en": "Pregnant / Pregnancy", "cat": "Patient State", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-092", "ar": "رضاعة", "fr": "Allaitement", "en": "Breastfeeding", "cat": "Patient State", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-093", "ar": "رضيع", "fr": "Bébé / Nourrisson", "en": "Baby / Infant", "cat": "Patient State", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "MED-094", "ar": "طفل", "fr": "Enfant", "en": "Child", "cat": "Patient State", "ref": "VDzSL & 3DZSignDB", "vdzsl": "طفل", "clips": 20, "status": "data_available"},
+    {"id": "MED-095", "ar": "مسن", "fr": "Personne âgée", "en": "Elderly / Senior", "cat": "Patient State", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-096", "ar": "كم", "fr": "Combien (prix / dose)", "en": "How much (cost / dose)", "cat": "Counter Service", "ref": "VDzSL", "vdzsl": "كم", "clips": 20, "status": "training_complete"},
+    {"id": "MED-097", "ar": "مال", "fr": "Prix / Argent", "en": "Price / Money", "cat": "Counter Service", "ref": "VDzSL", "vdzsl": "مال", "clips": 20, "status": "training_complete"},
+    {"id": "MED-098", "ar": "بطاقة الشفاء", "fr": "Carte Chifa (sécurité sociale)", "en": "Chifa social security card", "cat": "Counter Service", "ref": "Usage pharmacy Algérie", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "MED-099", "ar": "يفحص", "fr": "Examiner / Ausculter", "en": "Examine / Medical checkup", "cat": "Professional Action", "ref": "VDzSL", "vdzsl": "يفحص", "clips": 20, "status": "data_available"},
+    {"id": "MED-100", "ar": "يغسل", "fr": "Laver / Désinfecter les mains", "en": "Wash / Disinfect hands", "cat": "Hygiene", "ref": "VDzSL", "vdzsl": "يغسل", "clips": 20, "status": "data_available"},
+]
+
+
+# 30 Emergency Concepts (EMG-001 to EMG-030)
+EMERGENCY_30: List[Dict[str, Any]] = [
+    # Requesting Immediate Help (1-8)
+    {"id": "EMG-001", "ar": "خطر", "fr": "Danger / Urgence", "en": "Danger / Emergency", "cat": "Urgency", "ref": "VDzSL & 3DZSignDB", "vdzsl": "خطر", "clips": 20, "status": "training_complete"},
+    {"id": "EMG-002", "ar": "يساعد", "fr": "Au secours / Aider", "en": "Help / Assist urgently", "cat": "Urgency", "ref": "VDzSL & 3DZSignDB", "vdzsl": "يساعد", "clips": 20, "status": "training_complete"},
+    {"id": "EMG-003", "ar": "ينقذ", "fr": "Sauver / Secourir", "en": "Save / Rescue", "cat": "Urgency", "ref": "VDzSL & 3DZSignDB", "vdzsl": "ينقذ", "clips": 20, "status": "data_available"},
+    {"id": "EMG-004", "ar": "حادث", "fr": "Accident grave", "en": "Accident / Crash", "cat": "Trauma", "ref": "VDzSL & 3DZSignDB", "vdzsl": "حادث", "clips": 20, "status": "data_available"},
+    {"id": "EMG-005", "ar": "يتصل هاتفيا", "fr": "Appeler au téléphone (secours)", "en": "Call phone (emergency)", "cat": "Action", "ref": "VDzSL & 3DZSignDB", "vdzsl": "يتصل هاتفيا", "clips": 20, "status": "data_available"},
+    {"id": "EMG-006", "ar": "إسعاف", "fr": "Ambulance / Protection Civile", "en": "Ambulance / Paramedics", "cat": "Emergency Service", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "EMG-007", "ar": "الآن", "fr": "Tout de suite / Immédiatement", "en": "Immediately / Right now", "cat": "Temporal", "ref": "VDzSL", "vdzsl": "الآن", "clips": 20, "status": "training_complete"},
+    {"id": "EMG-008", "ar": "مستعجل", "fr": "Urgent", "en": "Urgent", "cat": "Urgency", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+
+    # Severe Pain and Trauma (9-16)
+    {"id": "EMG-009", "ar": "نزيف", "fr": "Hémorragie / Saignement abondant", "en": "Bleeding / Severe hemorrhage", "cat": "Trauma", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "EMG-010", "ar": "دم", "fr": "Sang", "en": "Blood", "cat": "Trauma", "ref": "Dictionnaire LSA 2017 / 3DZSignDB", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "EMG-011", "ar": "كسر", "fr": "Fracture osseuse", "en": "Bone fracture / Broken bone", "cat": "Trauma", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "EMG-012", "ar": "حروق", "fr": "Brûlure grave", "en": "Severe burn", "cat": "Trauma", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "EMG-013", "ar": "ألم حاد في الصدر", "fr": "Douleur thoracique aiguë / Crise cardiaque", "en": "Acute chest pain / Heart attack", "cat": "Cardiac Emergency", "ref": "Enquête urgentistes LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "EMG-014", "ar": "جرح عميق", "fr": "Plaie profonde / Coupure", "en": "Deep wound / Laceration", "cat": "Trauma", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "EMG-015", "ar": "سقوط", "fr": "Chute violente", "en": "Severe fall", "cat": "Trauma", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "EMG-016", "ar": "ضربة في الرأس", "fr": "Traumatisme crânien / Choc à la tête", "en": "Head trauma / Concussion", "cat": "Trauma", "ref": "Enquête médicale LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+
+    # Breathing Difficulty & Consciousness (17-24)
+    {"id": "EMG-017", "ar": "صعوبة في التنفس", "fr": "Détresse respiratoire / Étouffement", "en": "Breathing difficulty / Choking", "cat": "Respiratory", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "EMG-018", "ar": "غيبوبة", "fr": "Perte de connaissance / Évanouissement", "en": "Loss of consciousness / Fainting", "cat": "Neurological", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "EMG-019", "ar": "تشنج", "fr": "Convulsion / Crise d'épilepsie", "en": "Convulsion / Seizure", "cat": "Neurological", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "EMG-020", "ar": "تسمم", "fr": "Intoxication / Empoisonnement", "en": "Poisoning / Intoxication", "cat": "Toxicology", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "EMG-021", "ar": "صدمة حساسية", "fr": "Choc anaphylactique", "en": "Anaphylactic shock", "cat": "Allergy Emergency", "ref": "Enquête médicale LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "EMG-022", "ar": "اختناق", "fr": "Asphyxie / Suffocation", "en": "Suffocation / Asphyxiation", "cat": "Respiratory", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "EMG-023", "ar": "شلل مفاجئ", "fr": "Paralysie brutale (AVC)", "en": "Sudden paralysis / Stroke", "cat": "Neurological", "ref": "Enquête urgentistes LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "EMG-024", "ar": "ضربة شمس", "fr": "Insolation sévère", "en": "Heatstroke", "cat": "Environmental", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+
+    # Emergency Services & Critical Status (25-30)
+    {"id": "EMG-025", "ar": "الحماية المدنية", "fr": "Protection Civile (14 / 1021)", "en": "Civil Protection (Algeria 14)", "cat": "Service", "ref": "Usage national algérien", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "EMG-026", "ar": "مصلحة الاستعجالات", "fr": "Service des Urgences (CHU)", "en": "Emergency Room / ER", "cat": "Location", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "reference_verified"},
+    {"id": "EMG-027", "ar": "الإنعاش", "fr": "Réanimation / Soins intensifs", "en": "Intensive Care Unit (ICU)", "cat": "Location", "ref": "Dictionnaire LSA 2017", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "EMG-028", "ar": "موت", "fr": "Décès / Danger de mort", "en": "Death / Fatal risk", "cat": "Critical Status", "ref": "VDzSL & 3DZSignDB", "vdzsl": "موت", "clips": 20, "status": "data_available"},
+    {"id": "EMG-029", "ar": "تحذير", "fr": "Attention / Alerte", "en": "Warning / Alert", "cat": "Warning", "ref": "VDzSL & 3DZSignDB", "vdzsl": "تحذير", "clips": 20, "status": "data_available"},
+    {"id": "EMG-030", "ar": "توقف", "fr": "Arrêter / Stop (hémorragie/médicament)", "en": "Stop immediately", "cat": "Action", "ref": "VDzSL", "vdzsl": "توقف", "clips": 20, "status": "data_available"},
+]
+
+
+# 20 General Healthcare & Communication Concepts (GEN-001 to GEN-020)
+GENERAL_HEALTHCARE_20: List[Dict[str, Any]] = [
+    # Communication and Understanding (1-10)
+    {"id": "GEN-001", "ar": "من فضلك", "fr": "S'il vous plaît", "en": "Please", "cat": "Politeness", "ref": "VDzSL & 3DZSignDB", "vdzsl": "من فضلك", "clips": 20, "status": "training_complete"},
+    {"id": "GEN-002", "ar": "شكرا", "fr": "Merci", "en": "Thank you", "cat": "Politeness", "ref": "VDzSL & 3DZSignDB", "vdzsl": "شكرا", "clips": 20, "status": "training_complete"},
+    {"id": "GEN-003", "ar": "نعم", "fr": "Oui", "en": "Yes", "cat": "Confirmation", "ref": "VDzSL & 3DZSignDB", "vdzsl": "نعم", "clips": 20, "status": "training_complete"},
+    {"id": "GEN-004", "ar": "لا", "fr": "Non", "en": "No", "cat": "Confirmation", "ref": "VDzSL & 3DZSignDB", "vdzsl": "لا", "clips": 20, "status": "training_complete"},
+    {"id": "GEN-005", "ar": "حسنا", "fr": "D'accord / Bien reçu", "en": "Okay / Understood", "cat": "Confirmation", "ref": "VDzSL & 3DZSignDB", "vdzsl": "حسنا", "clips": 20, "status": "training_complete"},
+    {"id": "GEN-006", "ar": "سؤال", "fr": "Question / J'ai une question", "en": "Question", "cat": "Clarification", "ref": "VDzSL & 3DZSignDB", "vdzsl": "سؤال", "clips": 20, "status": "data_available"},
+    {"id": "GEN-007", "ar": "يجيب", "fr": "Répondre / Réponse", "en": "Answer / Reply", "cat": "Clarification", "ref": "VDzSL & 3DZSignDB", "vdzsl": "يجيب", "clips": 20, "status": "data_available"},
+    {"id": "GEN-008", "ar": "فهم", "fr": "Comprendre / J'ai compris", "en": "Understand", "cat": "Clarification", "ref": "VDzSL & 3DZSignDB", "vdzsl": "فهم", "clips": 20, "status": "data_available"},
+    {"id": "GEN-009", "ar": "يشرح", "fr": "Expliquer / Pouvez-vous expliquer ?", "en": "Explain", "cat": "Clarification", "ref": "VDzSL & 3DZSignDB", "vdzsl": "يشرح", "clips": 20, "status": "data_available"},
+    {"id": "GEN-010", "ar": "يكرر", "fr": "Répéter / Répétez s'il vous plaît", "en": "Repeat", "cat": "Clarification", "ref": "VDzSL & 3DZSignDB", "vdzsl": "يكرر", "clips": 20, "status": "data_available"},
+
+    # Patient Needs, Coordination, and Assistance (11-20)
+    {"id": "GEN-011", "ar": "يطلب", "fr": "Demander / Besoin de", "en": "Ask for / Request", "cat": "Assistance", "ref": "VDzSL", "vdzsl": "يطلب", "clips": 20, "status": "data_available"},
+    {"id": "GEN-012", "ar": "ينتبه", "fr": "Attention / Soyez vigilant", "en": "Pay attention / Be careful", "cat": "Safety", "ref": "VDzSL", "vdzsl": "ينتبه", "clips": 20, "status": "data_available"},
+    {"id": "GEN-013", "ar": "مشكلة", "fr": "Problème / J'ai un souci", "en": "Problem", "cat": "Assistance", "ref": "VDzSL & 3DZSignDB", "vdzsl": "مشكلة", "clips": 20, "status": "data_available"},
+    {"id": "GEN-014", "ar": "ينسى", "fr": "Oublier / J'ai oublié ma dose", "en": "Forget / Missed dose", "cat": "Medication Adherence", "ref": "VDzSL", "vdzsl": "ينسى", "clips": 20, "status": "data_available"},
+    {"id": "GEN-015", "ar": "يدخن", "fr": "Tabac / Fumer", "en": "Smoking / Tobacco", "cat": "Lifestyle Context", "ref": "VDzSL", "vdzsl": "يدخن", "clips": 20, "status": "data_available"},
+    {"id": "GEN-016", "ar": "اليوم", "fr": "Aujourd'hui", "en": "Today", "cat": "Scheduling", "ref": "VDzSL & 3DZSignDB", "vdzsl": "اليوم", "clips": 20, "status": "data_available"},
+    {"id": "GEN-017", "ar": "غدا", "fr": "Demain", "en": "Tomorrow", "cat": "Scheduling", "ref": "VDzSL & 3DZSignDB", "vdzsl": "غدا", "clips": 20, "status": "data_available"},
+    {"id": "GEN-018", "ar": "اكتب لي", "fr": "Écrivez-moi sur papier", "en": "Write it down for me", "cat": "Accessibility", "ref": "Stratégie de communication LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "GEN-019", "ar": "أرني", "fr": "Montrez-moi sur la boîte", "en": "Show me on packaging", "cat": "Accessibility", "ref": "Stratégie de communication LSA", "vdzsl": None, "clips": 0, "status": "data_missing"},
+    {"id": "GEN-020", "ar": "ببطء", "fr": "Plus lentement s'il vous plaît", "en": "More slowly please", "cat": "Communication", "ref": "VDzSL", "vdzsl": "ببطء", "clips": 20, "status": "data_available"},
+]
+
+
+def get_all_target_concepts() -> List[Dict[str, Any]]:
+    """Return all 150 unique target concepts with verified deduplication."""
+    all_concepts = list(MEDICAL_PHARMACY_100) + list(EMERGENCY_30) + list(GENERAL_HEALTHCARE_20)
+    assert len(all_concepts) == 150, f"Expected exactly 150 target concepts, got {len(all_concepts)}"
+
+    # Check ID uniqueness
+    ids = [c["id"] for c in all_concepts]
+    assert len(ids) == len(set(ids)), "Duplicate concept IDs detected!"
+    return all_concepts
+
+
+TARGET_VOCABULARY_150: List[Dict[str, Any]] = get_all_target_concepts()
+
+
+def get_inventory_summary() -> Dict[str, Any]:
+    """Return structured summary of the 150 target vocabulary inventory."""
+    concepts = TARGET_VOCABULARY_150
+    statuses: Dict[str, int] = {}
+    for c in concepts:
+        st = c.get("status", "unknown")
+        statuses[st] = statuses.get(st, 0) + 1
+
+    return {
+        "total_target_concepts": len(concepts),
+        "category_breakdown": {
+            "Medical & Pharmacy": len(MEDICAL_PHARMACY_100),
+            "Emergency": len(EMERGENCY_30),
+            "General Healthcare": len(GENERAL_HEALTHCARE_20),
+        },
+        "status_counts": statuses,
+    }
+
+
+def generate_vocabulary_inventory_artifacts(output_dir: str = r"data\manifests") -> Dict[str, Any]:
+    """Compile and save target vocabulary JSON and CSV manifests."""
+    os.makedirs(output_dir, exist_ok=True)
+    concepts = get_all_target_concepts()
+
+    df = pd.DataFrame(concepts)
+
+    json_path = os.path.join(output_dir, "target_vocabulary_150.json")
+    csv_path = os.path.join(output_dir, "target_vocabulary_150.csv")
+
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(concepts, f, ensure_ascii=False, indent=2)
+
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig")
+
+    status_counts = df["status"].value_counts().to_dict()
+    category_counts = {
+        "medical_pharmacy_count": len(MEDICAL_PHARMACY_100),
+        "emergency_count": len(EMERGENCY_30),
+        "general_healthcare_count": len(GENERAL_HEALTHCARE_20),
+        "total_unique_concepts": len(concepts),
+    }
+
+    summary = {
+        "category_counts": category_counts,
+        "status_breakdown": status_counts,
+        "available_in_vdzsl": int((df["clips"] > 0).sum()),
+        "missing_requiring_recording": int((df["clips"] == 0).sum()),
+        "json_path": json_path,
+        "csv_path": csv_path,
+    }
+
+    summary_path = os.path.join(output_dir, "vocabulary_audit_summary.json")
+    with open(summary_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+
+    return summary
+
+
+if __name__ == "__main__":
+    res = generate_vocabulary_inventory_artifacts()
+    print("Compiled 150 Target Vocabulary Concepts:")
+    print(json.dumps(res, ensure_ascii=False, indent=2))
