@@ -1,0 +1,32 @@
+﻿letter_id,arabic_char,arabic_name,french_name,handshape_type,reference_status,data_status,clips_found,collection_priority
+ALPHA-01,أ,ألف,Alif,static,reference_verified,data_missing,0,high
+ALPHA-02,ب,باء,Ba,static,reference_verified,data_missing,0,high
+ALPHA-03,ت,تاء,Ta,static,reference_verified,data_missing,0,high
+ALPHA-04,ث,ثاء,Tha,static,reference_verified,data_missing,0,high
+ALPHA-05,ج,جيم,Djim,static,reference_verified,data_missing,0,high
+ALPHA-06,ح,حاء,Ha,static,reference_verified,data_missing,0,high
+ALPHA-07,خ,خاء,Kha,static,reference_verified,data_missing,0,high
+ALPHA-08,د,دال,Dal,static,reference_verified,data_missing,0,high
+ALPHA-09,ذ,ذال,Dhal,static,reference_verified,data_missing,0,high
+ALPHA-10,ر,راء,Ra,dynamic,reference_verified,data_missing,0,high
+ALPHA-11,ز,زاي,Zay,dynamic,reference_verified,data_missing,0,high
+ALPHA-12,س,سين,Sin,static,reference_verified,data_missing,0,high
+ALPHA-13,ش,شين,Chin,static,reference_verified,data_missing,0,high
+ALPHA-14,ص,صاد,Sad,static,reference_verified,data_missing,0,high
+ALPHA-15,ض,ضاد,Dad,static,reference_verified,data_missing,0,high
+ALPHA-16,ط,طاء,Ta (emphatique),static,reference_verified,data_missing,0,high
+ALPHA-17,ظ,ظاء,Dha (emphatique),static,reference_verified,data_missing,0,high
+ALPHA-18,ع,عين,Ain,static,reference_verified,data_missing,0,high
+ALPHA-19,غ,غين,Ghain,static,reference_verified,data_missing,0,high
+ALPHA-20,ف,فاء,Fa,static,reference_verified,data_missing,0,high
+ALPHA-21,ق,قاف,Qaf,static,reference_verified,data_missing,0,high
+ALPHA-22,ك,كاف,Kaf,static,reference_verified,data_missing,0,high
+ALPHA-23,ل,لام,Lam,static,reference_verified,data_missing,0,high
+ALPHA-24,م,ميم,Mim,static,reference_verified,data_missing,0,high
+ALPHA-25,ن,نون,Noun,static,reference_verified,data_missing,0,high
+ALPHA-26,هـ,هاء,Haa,static,reference_verified,data_missing,0,high
+ALPHA-27,و,واو,Waw,static,reference_verified,data_missing,0,high
+ALPHA-28,ي,ياء,Ya,static,reference_verified,data_missing,0,high
+ALPHA-29,ة,تاء مربوطة,Ta Marbuta,static,reference_verified,data_missing,0,medium
+ALPHA-30,لا,لام ألف,Lam-Alif,static,reference_verified,data_missing,0,medium
+ALPHA-31,ء,همزة,Hamza,static,reference_verified,data_missing,0,medium
