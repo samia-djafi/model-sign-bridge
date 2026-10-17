@@ -1,0 +1,18 @@
+{
+  "category_counts": {
+    "medical_pharmacy_count": 100,
+    "emergency_count": 30,
+    "general_healthcare_count": 20,
+    "total_unique_concepts": 150
+  },
+  "status_breakdown": {
+    "reference_verified": 43,
+    "data_missing": 40,
+    "data_available": 35,
+    "training_complete": 32
+  },
+  "available_in_vdzsl": 67,
+  "missing_requiring_recording": 83,
+  "json_path": "data\\manifests\\target_vocabulary_150.json",
+  "csv_path": "data\\manifests\\target_vocabulary_150.csv"
+}
