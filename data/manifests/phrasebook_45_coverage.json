@@ -1,0 +1,1191 @@
+{
+  "total_phrases": 45,
+  "support_summary": {
+    "FULL_RECOGNITION": 12,
+    "PARTIAL_RECOGNITION": 15,
+    "PHRASEBOOK_FALLBACK": 18
+  },
+  "unique_gloss_tokens": 52,
+  "recognized_gloss_tokens_count": 18,
+  "missing_gloss_tokens_count": 34,
+  "recognized_gloss_tokens": [
+    "DAY",
+    "DOCTOR",
+    "EAT",
+    "FEVER",
+    "HEADACHE",
+    "HELP",
+    "HOW-LONG",
+    "HOW-OFTEN",
+    "NO",
+    "NOW",
+    "ONCE",
+    "PAIN",
+    "PLEASE",
+    "PRICE",
+    "SICK",
+    "THANK-YOU",
+    "TWICE",
+    "YES"
+  ],
+  "missing_gloss_tokens": [
+    "AFTER",
+    "ALLERGY",
+    "AMBULANCE",
+    "APPOINTMENT",
+    "BLOOD",
+    "BREATHE",
+    "CALL",
+    "COUGH",
+    "DIFFICULT",
+    "DIZZY",
+    "HAVE",
+    "HELLO",
+    "I",
+    "INJURED",
+    "MEDICINE",
+    "NEED",
+    "OTHER",
+    "REPEAT",
+    "RETURN",
+    "SAFE",
+    "SINCE",
+    "SLOW",
+    "STOMACH",
+    "TAKE",
+    "THIS",
+    "THROAT",
+    "TOMORROW",
+    "UNDERSTAND",
+    "WAIT",
+    "WHAT",
+    "WHEN",
+    "WHERE",
+    "WRITE",
+    "YOU"
+  ],
+  "phrase_evaluations": [
+    {
+      "phrase_id": "ph_headache",
+      "category": "symptoms",
+      "text": {
+        "fr": "J'ai mal à la tête.",
+        "ar": "عندي صداع في الرأس.",
+        "en": "I have a headache."
+      },
+      "gloss": [
+        "HEADACHE"
+      ],
+      "required_glosses": [
+        "HEADACHE"
+      ],
+      "recognized_glosses": [
+        "HEADACHE"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_pain",
+      "category": "symptoms",
+      "text": {
+        "fr": "J'ai mal.",
+        "ar": "أشعر بألم.",
+        "en": "I have pain."
+      },
+      "gloss": [
+        "PAIN"
+      ],
+      "required_glosses": [
+        "PAIN"
+      ],
+      "recognized_glosses": [
+        "PAIN"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_fever",
+      "category": "symptoms",
+      "text": {
+        "fr": "J'ai de la fièvre.",
+        "ar": "عندي حمى.",
+        "en": "I have a fever."
+      },
+      "gloss": [
+        "FEVER"
+      ],
+      "required_glosses": [
+        "FEVER"
+      ],
+      "recognized_glosses": [
+        "FEVER"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_stomach_pain",
+      "category": "symptoms",
+      "text": {
+        "fr": "J'ai mal au ventre.",
+        "ar": "عندي ألم في البطن.",
+        "en": "My stomach hurts."
+      },
+      "gloss": [
+        "STOMACH",
+        "PAIN"
+      ],
+      "required_glosses": [
+        "STOMACH",
+        "PAIN"
+      ],
+      "recognized_glosses": [
+        "PAIN"
+      ],
+      "missing_glosses": [
+        "STOMACH"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['PAIN'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_sick",
+      "category": "symptoms",
+      "text": {
+        "fr": "Je me sens malade.",
+        "ar": "أشعر أنني مريض.",
+        "en": "I feel sick."
+      },
+      "gloss": [
+        "SICK"
+      ],
+      "required_glosses": [
+        "SICK"
+      ],
+      "recognized_glosses": [
+        "SICK"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_cough",
+      "category": "symptoms",
+      "text": {
+        "fr": "J'ai de la toux.",
+        "ar": "عندي سعال.",
+        "en": "I have a cough."
+      },
+      "gloss": [
+        "COUGH"
+      ],
+      "required_glosses": [
+        "COUGH"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "COUGH"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['COUGH'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_dizzy",
+      "category": "symptoms",
+      "text": {
+        "fr": "J'ai des vertiges.",
+        "ar": "أشعر بدوار.",
+        "en": "I feel dizzy."
+      },
+      "gloss": [
+        "DIZZY"
+      ],
+      "required_glosses": [
+        "DIZZY"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "DIZZY"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['DIZZY'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_throat_pain",
+      "category": "symptoms",
+      "text": {
+        "fr": "J'ai mal à la gorge.",
+        "ar": "عندي ألم في الحلق.",
+        "en": "I have a sore throat."
+      },
+      "gloss": [
+        "THROAT",
+        "PAIN"
+      ],
+      "required_glosses": [
+        "THROAT",
+        "PAIN"
+      ],
+      "recognized_glosses": [
+        "PAIN"
+      ],
+      "missing_glosses": [
+        "THROAT"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['PAIN'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_need_medicine",
+      "category": "medication",
+      "text": {
+        "fr": "J'ai besoin de médicaments.",
+        "ar": "أحتاج إلى دواء.",
+        "en": "I need medicine."
+      },
+      "gloss": [
+        "I",
+        "NEED",
+        "MEDICINE"
+      ],
+      "required_glosses": [
+        "I",
+        "NEED",
+        "MEDICINE"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "I",
+        "NEED",
+        "MEDICINE"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['I', 'NEED', 'MEDICINE'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_allergy_this",
+      "category": "medication",
+      "text": {
+        "fr": "Je suis allergique à ceci.",
+        "ar": "عندي حساسية من هذا.",
+        "en": "I am allergic to this."
+      },
+      "gloss": [
+        "ALLERGY",
+        "THIS"
+      ],
+      "required_glosses": [
+        "ALLERGY",
+        "THIS"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "ALLERGY",
+        "THIS"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['ALLERGY', 'THIS'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_what_take",
+      "category": "medication",
+      "text": {
+        "fr": "Que dois-je prendre ?",
+        "ar": "ماذا يجب أن أتناول؟",
+        "en": "What should I take?"
+      },
+      "gloss": [
+        "WHAT",
+        "TAKE"
+      ],
+      "required_glosses": [
+        "WHAT",
+        "TAKE"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "WHAT",
+        "TAKE"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['WHAT', 'TAKE'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_how_often_take",
+      "category": "medication",
+      "text": {
+        "fr": "À quelle fréquence dois-je le prendre ?",
+        "ar": "كم مرة يجب أن أتناوله؟",
+        "en": "How often should I take it?"
+      },
+      "gloss": [
+        "HOW-OFTEN",
+        "TAKE"
+      ],
+      "required_glosses": [
+        "HOW-OFTEN",
+        "TAKE"
+      ],
+      "recognized_glosses": [
+        "HOW-OFTEN"
+      ],
+      "missing_glosses": [
+        "TAKE"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['HOW-OFTEN'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_safe_medicine_other",
+      "category": "medication",
+      "text": {
+        "fr": "Est-ce sans danger avec mes autres médicaments ?",
+        "ar": "هل هذا آمن مع أدويتي الأخرى؟",
+        "en": "Is it safe with my other medicine?"
+      },
+      "gloss": [
+        "SAFE",
+        "MEDICINE",
+        "OTHER"
+      ],
+      "required_glosses": [
+        "SAFE",
+        "MEDICINE",
+        "OTHER"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "SAFE",
+        "MEDICINE",
+        "OTHER"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['SAFE', 'MEDICINE', 'OTHER'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_have_medicine_pain",
+      "category": "medication",
+      "text": {
+        "fr": "Avez-vous quelque chose contre la douleur ?",
+        "ar": "هل لديكم دواء للألم؟",
+        "en": "Do you have something for pain?"
+      },
+      "gloss": [
+        "HAVE",
+        "MEDICINE",
+        "PAIN"
+      ],
+      "required_glosses": [
+        "HAVE",
+        "MEDICINE",
+        "PAIN"
+      ],
+      "recognized_glosses": [
+        "PAIN"
+      ],
+      "missing_glosses": [
+        "HAVE",
+        "MEDICINE"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['PAIN'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_appointment_have",
+      "category": "appointment",
+      "text": {
+        "fr": "J'ai un rendez-vous.",
+        "ar": "لدي موعد.",
+        "en": "I have an appointment."
+      },
+      "gloss": [
+        "APPOINTMENT",
+        "HAVE"
+      ],
+      "required_glosses": [
+        "APPOINTMENT",
+        "HAVE"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "APPOINTMENT",
+        "HAVE"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['APPOINTMENT', 'HAVE'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_need_doctor",
+      "category": "appointment",
+      "text": {
+        "fr": "J'ai besoin de voir un médecin.",
+        "ar": "أحتاج إلى استشارة طبيب.",
+        "en": "I need to see a doctor."
+      },
+      "gloss": [
+        "NEED",
+        "DOCTOR"
+      ],
+      "required_glosses": [
+        "NEED",
+        "DOCTOR"
+      ],
+      "recognized_glosses": [
+        "DOCTOR"
+      ],
+      "missing_glosses": [
+        "NEED"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['DOCTOR'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_where_go",
+      "category": "appointment",
+      "text": {
+        "fr": "Où dois-je aller ?",
+        "ar": "إلى أين يجب أن أذهب؟",
+        "en": "Where should I go?"
+      },
+      "gloss": [
+        "WHERE"
+      ],
+      "required_glosses": [
+        "WHERE"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "WHERE"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['WHERE'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_wait_how_long",
+      "category": "appointment",
+      "text": {
+        "fr": "Combien de temps faut-il attendre ?",
+        "ar": "كم مدة الانتظار؟",
+        "en": "How long is the wait?"
+      },
+      "gloss": [
+        "WAIT",
+        "HOW-LONG"
+      ],
+      "required_glosses": [
+        "WAIT",
+        "HOW-LONG"
+      ],
+      "recognized_glosses": [
+        "HOW-LONG"
+      ],
+      "missing_glosses": [
+        "WAIT"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['HOW-LONG'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_write_please",
+      "category": "appointment",
+      "text": {
+        "fr": "Pouvez-vous l'écrire s'il vous plaît ?",
+        "ar": "هل يمكنك كتابة ذلك من فضلك؟",
+        "en": "Can you write it down please?"
+      },
+      "gloss": [
+        "WRITE",
+        "PLEASE"
+      ],
+      "required_glosses": [
+        "WRITE",
+        "PLEASE"
+      ],
+      "recognized_glosses": [
+        "PLEASE"
+      ],
+      "missing_glosses": [
+        "WRITE"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['PLEASE'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_where_pain",
+      "category": "symptoms",
+      "text": {
+        "fr": "Où avez-vous mal ?",
+        "ar": "أين تشعر بالألم؟",
+        "en": "Where does it hurt?"
+      },
+      "gloss": [
+        "WHERE",
+        "PAIN"
+      ],
+      "required_glosses": [
+        "WHERE",
+        "PAIN"
+      ],
+      "recognized_glosses": [
+        "PAIN"
+      ],
+      "missing_glosses": [
+        "WHERE"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['PAIN'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_how_long_pain",
+      "category": "symptoms",
+      "text": {
+        "fr": "Depuis combien de temps avez-vous cette douleur ?",
+        "ar": "منذ متى وأنت تشعر بهذا الألم؟",
+        "en": "How long have you had this pain?"
+      },
+      "gloss": [
+        "HOW-LONG",
+        "PAIN"
+      ],
+      "required_glosses": [
+        "HOW-LONG",
+        "PAIN"
+      ],
+      "recognized_glosses": [
+        "HOW-LONG",
+        "PAIN"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_since_when",
+      "category": "symptoms",
+      "text": {
+        "fr": "Depuis quand ?",
+        "ar": "منذ متى؟",
+        "en": "Since when?"
+      },
+      "gloss": [
+        "SINCE",
+        "WHEN"
+      ],
+      "required_glosses": [
+        "SINCE",
+        "WHEN"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "SINCE",
+        "WHEN"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['SINCE', 'WHEN'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_allergy_you",
+      "category": "medication",
+      "text": {
+        "fr": "Avez-vous des allergies ?",
+        "ar": "هل لديك أي حساسية؟",
+        "en": "Are you allergic to anything?"
+      },
+      "gloss": [
+        "ALLERGY",
+        "YOU"
+      ],
+      "required_glosses": [
+        "ALLERGY",
+        "YOU"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "ALLERGY",
+        "YOU"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['ALLERGY', 'YOU'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_other_medicine_you",
+      "category": "medication",
+      "text": {
+        "fr": "Prenez-vous d'autres médicaments ?",
+        "ar": "هل تتناول أدوية أخرى؟",
+        "en": "Do you take other medicine?"
+      },
+      "gloss": [
+        "OTHER",
+        "MEDICINE",
+        "YOU"
+      ],
+      "required_glosses": [
+        "OTHER",
+        "MEDICINE",
+        "YOU"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "OTHER",
+        "MEDICINE",
+        "YOU"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['OTHER', 'MEDICINE', 'YOU'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_take_once_day",
+      "category": "medication",
+      "text": {
+        "fr": "Prenez ceci une fois par jour.",
+        "ar": "تناول هذا مرة واحدة يوميًا.",
+        "en": "Take this once a day."
+      },
+      "gloss": [
+        "THIS",
+        "ONCE",
+        "DAY",
+        "TAKE"
+      ],
+      "required_glosses": [
+        "THIS",
+        "ONCE",
+        "DAY",
+        "TAKE"
+      ],
+      "recognized_glosses": [
+        "ONCE",
+        "DAY"
+      ],
+      "missing_glosses": [
+        "THIS",
+        "TAKE"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['ONCE', 'DAY'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_take_twice_day",
+      "category": "medication",
+      "text": {
+        "fr": "Prenez ceci deux fois par jour.",
+        "ar": "تناول هذا مرتين يوميًا.",
+        "en": "Take this twice a day."
+      },
+      "gloss": [
+        "THIS",
+        "TWICE",
+        "DAY",
+        "TAKE"
+      ],
+      "required_glosses": [
+        "THIS",
+        "TWICE",
+        "DAY",
+        "TAKE"
+      ],
+      "recognized_glosses": [
+        "TWICE",
+        "DAY"
+      ],
+      "missing_glosses": [
+        "THIS",
+        "TAKE"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['TWICE', 'DAY'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_take_after_eat",
+      "category": "medication",
+      "text": {
+        "fr": "Prenez-le après les repas.",
+        "ar": "تناوله بعد الأكل.",
+        "en": "Take it after eating."
+      },
+      "gloss": [
+        "EAT",
+        "AFTER",
+        "TAKE"
+      ],
+      "required_glosses": [
+        "EAT",
+        "AFTER",
+        "TAKE"
+      ],
+      "recognized_glosses": [
+        "EAT"
+      ],
+      "missing_glosses": [
+        "AFTER",
+        "TAKE"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['EAT'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_tomorrow_return",
+      "category": "appointment",
+      "text": {
+        "fr": "Revenez demain.",
+        "ar": "عد غدًا.",
+        "en": "Come back tomorrow."
+      },
+      "gloss": [
+        "TOMORROW",
+        "RETURN"
+      ],
+      "required_glosses": [
+        "TOMORROW",
+        "RETURN"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "TOMORROW",
+        "RETURN"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['TOMORROW', 'RETURN'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_wait_please",
+      "category": "appointment",
+      "text": {
+        "fr": "Veuillez patienter s'il vous plaît.",
+        "ar": "يرجى الانتظار من فضلك.",
+        "en": "Please wait."
+      },
+      "gloss": [
+        "WAIT",
+        "PLEASE"
+      ],
+      "required_glosses": [
+        "WAIT",
+        "PLEASE"
+      ],
+      "recognized_glosses": [
+        "PLEASE"
+      ],
+      "missing_glosses": [
+        "WAIT"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['PLEASE'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_price",
+      "category": "everyday",
+      "text": {
+        "fr": "Quel est le prix ?",
+        "ar": "كم السعر؟",
+        "en": "What is the price?"
+      },
+      "gloss": [
+        "PRICE"
+      ],
+      "required_glosses": [
+        "PRICE"
+      ],
+      "recognized_glosses": [
+        "PRICE"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_understand_you",
+      "category": "everyday",
+      "text": {
+        "fr": "Est-ce que vous comprenez ?",
+        "ar": "هل فهمت؟",
+        "en": "Do you understand?"
+      },
+      "gloss": [
+        "UNDERSTAND",
+        "YOU"
+      ],
+      "required_glosses": [
+        "UNDERSTAND",
+        "YOU"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "UNDERSTAND",
+        "YOU"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['UNDERSTAND', 'YOU'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_help",
+      "category": "emergency",
+      "text": {
+        "fr": "À l'aide !",
+        "ar": "ساعدوني !",
+        "en": "Help !"
+      },
+      "gloss": [
+        "HELP"
+      ],
+      "required_glosses": [
+        "HELP"
+      ],
+      "recognized_glosses": [
+        "HELP"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": true
+    },
+    {
+      "phrase_id": "ph_ambulance_call",
+      "category": "emergency",
+      "text": {
+        "fr": "Appelez une ambulance !",
+        "ar": "اتصلوا بالإسعاف !",
+        "en": "Call an ambulance !"
+      },
+      "gloss": [
+        "AMBULANCE",
+        "CALL"
+      ],
+      "required_glosses": [
+        "AMBULANCE",
+        "CALL"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "AMBULANCE",
+        "CALL"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['AMBULANCE', 'CALL'] are missing from training data; available via library selection.",
+      "emergency": true
+    },
+    {
+      "phrase_id": "ph_breathe_difficult",
+      "category": "emergency",
+      "text": {
+        "fr": "J'ai du mal à respirer.",
+        "ar": "أعاني من صعوبة في التنفس.",
+        "en": "I am having difficulty breathing."
+      },
+      "gloss": [
+        "BREATHE",
+        "DIFFICULT"
+      ],
+      "required_glosses": [
+        "BREATHE",
+        "DIFFICULT"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "BREATHE",
+        "DIFFICULT"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['BREATHE', 'DIFFICULT'] are missing from training data; available via library selection.",
+      "emergency": true
+    },
+    {
+      "phrase_id": "ph_injured",
+      "category": "emergency",
+      "text": {
+        "fr": "Je suis blessé.",
+        "ar": "أنا مصاب.",
+        "en": "I am injured."
+      },
+      "gloss": [
+        "INJURED"
+      ],
+      "required_glosses": [
+        "INJURED"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "INJURED"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['INJURED'] are missing from training data; available via library selection.",
+      "emergency": true
+    },
+    {
+      "phrase_id": "ph_bleeding",
+      "category": "emergency",
+      "text": {
+        "fr": "Je saigne.",
+        "ar": "أنا أنزف.",
+        "en": "I am bleeding."
+      },
+      "gloss": [
+        "BLOOD"
+      ],
+      "required_glosses": [
+        "BLOOD"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "BLOOD"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['BLOOD'] are missing from training data; available via library selection.",
+      "emergency": true
+    },
+    {
+      "phrase_id": "ph_doctor_now",
+      "category": "emergency",
+      "text": {
+        "fr": "J'ai besoin d'un médecin immédiatement.",
+        "ar": "أحتاج إلى طبيب الآن.",
+        "en": "I need a doctor now."
+      },
+      "gloss": [
+        "DOCTOR",
+        "NOW"
+      ],
+      "required_glosses": [
+        "DOCTOR",
+        "NOW"
+      ],
+      "recognized_glosses": [
+        "DOCTOR",
+        "NOW"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": true
+    },
+    {
+      "phrase_id": "ph_allergy_emergency",
+      "category": "emergency",
+      "text": {
+        "fr": "J'ai une allergie sévère.",
+        "ar": "عندي حساسية شديدة.",
+        "en": "I have a severe allergy."
+      },
+      "gloss": [
+        "ALLERGY",
+        "PAIN"
+      ],
+      "required_glosses": [
+        "ALLERGY",
+        "PAIN"
+      ],
+      "recognized_glosses": [
+        "PAIN"
+      ],
+      "missing_glosses": [
+        "ALLERGY"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['PAIN'] recognized; matched phrase offered for confirmation.",
+      "emergency": true
+    },
+    {
+      "phrase_id": "ph_emergency_contact",
+      "category": "emergency",
+      "text": {
+        "fr": "Contactez mon contact d'urgence s'il vous plaît.",
+        "ar": "يرجى الاتصال بجهة الاتصال الخاصة بالطوارئ.",
+        "en": "Please contact my emergency contact."
+      },
+      "gloss": [
+        "HELP",
+        "PLEASE"
+      ],
+      "required_glosses": [
+        "HELP",
+        "PLEASE"
+      ],
+      "recognized_glosses": [
+        "HELP",
+        "PLEASE"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": true
+    },
+    {
+      "phrase_id": "ph_hello",
+      "category": "everyday",
+      "text": {
+        "fr": "Bonjour.",
+        "ar": "مرحبًا.",
+        "en": "Hello."
+      },
+      "gloss": [
+        "HELLO"
+      ],
+      "required_glosses": [
+        "HELLO"
+      ],
+      "recognized_glosses": [],
+      "missing_glosses": [
+        "HELLO"
+      ],
+      "support_status": "PHRASEBOOK_FALLBACK",
+      "support_description": "Signs ['HELLO'] are missing from training data; available via library selection.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_thank_you",
+      "category": "everyday",
+      "text": {
+        "fr": "Merci.",
+        "ar": "شكرًا.",
+        "en": "Thank you."
+      },
+      "gloss": [
+        "THANK-YOU"
+      ],
+      "required_glosses": [
+        "THANK-YOU"
+      ],
+      "recognized_glosses": [
+        "THANK-YOU"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_yes",
+      "category": "everyday",
+      "text": {
+        "fr": "Oui.",
+        "ar": "نعم.",
+        "en": "Yes."
+      },
+      "gloss": [
+        "YES"
+      ],
+      "required_glosses": [
+        "YES"
+      ],
+      "recognized_glosses": [
+        "YES"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_no",
+      "category": "everyday",
+      "text": {
+        "fr": "Non.",
+        "ar": "لا.",
+        "en": "No."
+      },
+      "gloss": [
+        "NO"
+      ],
+      "required_glosses": [
+        "NO"
+      ],
+      "recognized_glosses": [
+        "NO"
+      ],
+      "missing_glosses": [],
+      "support_status": "FULL_RECOGNITION",
+      "support_description": "All sign tokens are recognized by the trained landmark model.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_repeat_please",
+      "category": "everyday",
+      "text": {
+        "fr": "Répétez s'il vous plaît.",
+        "ar": "أعد من فضلك.",
+        "en": "Please repeat."
+      },
+      "gloss": [
+        "REPEAT",
+        "PLEASE"
+      ],
+      "required_glosses": [
+        "REPEAT",
+        "PLEASE"
+      ],
+      "recognized_glosses": [
+        "PLEASE"
+      ],
+      "missing_glosses": [
+        "REPEAT"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['PLEASE'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    },
+    {
+      "phrase_id": "ph_slow_please",
+      "category": "everyday",
+      "text": {
+        "fr": "Plus lentement s'il vous plaît.",
+        "ar": "ببطء من فضلك.",
+        "en": "Slowly please."
+      },
+      "gloss": [
+        "SLOW",
+        "PLEASE"
+      ],
+      "required_glosses": [
+        "SLOW",
+        "PLEASE"
+      ],
+      "recognized_glosses": [
+        "PLEASE"
+      ],
+      "missing_glosses": [
+        "SLOW"
+      ],
+      "support_status": "PARTIAL_RECOGNITION",
+      "support_description": "Key signs ['PLEASE'] recognized; matched phrase offered for confirmation.",
+      "emergency": false
+    }
+  ]
+}
